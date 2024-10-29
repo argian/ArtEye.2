@@ -17,24 +17,9 @@ namespace ArtEye
 
         private Transform _spawn;
 
-        protected override void Awake()
-        {
-            base.Awake();
-
-            SetupXRRig();
-        }
-
-        public void SetupXRRig()
-        {
-            if (!XRRigPrefab || XRRig)
-                return;
-
-            XRRig = Instantiate(XRRigPrefab, transform);
-            XRRig.name = XRRigPrefab.name;
-        }
-
         private void OnEnable()
         {
+            SetupXRRig();
             SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
         }
 
@@ -45,20 +30,29 @@ namespace ArtEye
 
         private void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
         {
-            DestroyOtherRigsAndFindSpawn();
-            MoveXRRigToSpawn();
+            if (!XRRig)
+                return;
 
+            DestroyOtherRigsAndFindSpawn();
             RemoveDuplicateDependencies();
+            
+            MoveXRRigToSpawn();
 
             XRRig.SetActive(false);
             XRRig.SetActive(true);
         }
 
-        private void DestroyOtherRigsAndFindSpawn()
+        private void SetupXRRig()
         {
-            if (!XRRigPrefab)
+            if (!XRRigPrefab || XRRig)
                 return;
 
+            XRRig = Instantiate(XRRigPrefab, transform);
+            XRRig.name = XRRigPrefab.name;
+        }
+
+        private void DestroyOtherRigsAndFindSpawn()
+        {
             var xrRigs = FindObjectsByType<XROrigin>(FindObjectsSortMode.None);
 
             var fallbackTransform = DestroyOtherRigs(xrRigs);
@@ -101,13 +95,6 @@ namespace ArtEye
             _spawn = spawn.transform;
         }
 
-        [ContextMenu("Move XR Rig To Spawn")]
-        public void MoveXRRigToSpawn()
-        {
-            if (XRRig && _spawn)
-                XRRig.transform.SetPositionAndRotation(_spawn.position, _spawn.rotation);
-        }
-
         private void RemoveDuplicateDependencies()
         {
             var inputSystems = FindObjectsByType<XRUIInputModule>(FindObjectsSortMode.InstanceID);
@@ -122,6 +109,13 @@ namespace ArtEye
             {
                 Destroy(xrInteractionManagers[i].gameObject);
             }
+        }
+
+        [ContextMenu("Move XR Rig To Spawn")]
+        public void MoveXRRigToSpawn()
+        {
+            if (XRRig && _spawn)
+                XRRig.transform.SetPositionAndRotation(_spawn.position, _spawn.rotation);
         }
     }
 }
