@@ -8,7 +8,7 @@ namespace ArtEye
     {
         [SerializeField] private List<GameObject> prefabs = new();
 
-        [RuntimeInitializeOnLoadMethod]
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void OnRuntimeInitialized() 
         {
             foreach (var prefab in Instance.prefabs)

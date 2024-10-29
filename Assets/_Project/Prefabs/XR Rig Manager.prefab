@@ -45,4 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
-  <XRRig>k__BackingField: {fileID: 7389798875218500099, guid: e43eed0957b1ec545970e25226ddd4a7, type: 3}
+  XRRigPrefab: {fileID: 6989965862383295362, guid: e43eed0957b1ec545970e25226ddd4a7, type: 3}
+  spawnPrefab: {fileID: 0}

@@ -6,25 +6,29 @@ namespace ArtEye
 {
     public class XRRigManager : MonoSingleton<XRRigManager>
     {
-        [field: SerializeField] public XROrigin XRRig { get; private set; }
+        public GameObject XRRig { get; private set; }
+
+        [SerializeField] private GameObject XRRigPrefab;
+
+        [Space]
+        [SerializeField] private GameObject spawnPrefab;
+
+        private Transform _spawn;
 
         protected override void Awake()
         {
             base.Awake();
 
             SetupXRRig();
-
-            MoveXRRigAndDisableOthers();
         }
 
-        private void SetupXRRig()
+        public void SetupXRRig()
         {
-            if (!XRRig)
+            if (!XRRigPrefab || XRRig)
                 return;
 
-            var name = XRRig.gameObject.name;
-            XRRig = Instantiate(XRRig, transform);
-            XRRig.gameObject.name = name;
+            XRRig = Instantiate(XRRigPrefab, transform);
+            XRRig.name = XRRigPrefab.name;
         }
 
         private void OnEnable()
@@ -39,49 +43,65 @@ namespace ArtEye
 
         private void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
         {
-            MoveXRRigAndDisableOthers();
+            DestroyOtherRigsAndFindSpawn();
+            MoveXRRigToSpawn();
+
+            XRRig.SetActive(false);
+            XRRig.SetActive(true);
         }
 
-        private void MoveXRRigAndDisableOthers()
+        private void DestroyOtherRigsAndFindSpawn()
         {
-            if (!XRRig)
+            if (!XRRigPrefab)
                 return;
 
             var xrRigs = FindObjectsByType<XROrigin>(FindObjectsSortMode.None);
 
-            DisableOtherRigs(xrRigs, out XROrigin fallback);
+            var fallbackTransform = DestroyOtherRigs(xrRigs);
 
-            var (position, rotation) = GetTargetPositionAndRotation(fallback);
-
-            XRRig.transform.SetPositionAndRotation(position, rotation);
+            FindOrPrepareSpawn(fallbackTransform);
         }
 
-        private void DisableOtherRigs(XROrigin[] xrRigs, out XROrigin fallback)
+        private (Vector3, Quaternion) DestroyOtherRigs(XROrigin[] xrRigs)
         {
-            fallback = null;
+            var fallbackTransform = (Vector3.zero, Quaternion.identity);
 
             foreach (var rig in xrRigs)
             {
-                if (rig == XRRig)
+                if (rig.gameObject == XRRig)
                     continue;
 
-                rig.gameObject.SetActive(false);
+                fallbackTransform = (rig.transform.position, rig.transform.rotation);
 
-                fallback = rig;
+                Destroy(rig.gameObject);
             }
+
+            return fallbackTransform;
         }
 
-        private (Vector3, Quaternion) GetTargetPositionAndRotation(XROrigin fallback)
+        private void FindOrPrepareSpawn((Vector3 position, Quaternion rotation) fallback)
         {
             GameObject spawn = GameObject.FindGameObjectWithTag("Spawn");
 
-            if (spawn)
-                return (spawn.transform.position, spawn.transform.rotation);
-            
-            if (fallback)
-                return (fallback.transform.position, fallback.transform.rotation);
-            
-            return (Vector3.zero, Quaternion.identity);
+            if (!spawn)
+            {
+                if (spawnPrefab)
+                    spawn = Instantiate(spawnPrefab, fallback.position, fallback.rotation);
+                else
+                {
+                    spawn = new GameObject() { name = "Spawn", tag = "Spawn" };
+                    spawn.transform.SetPositionAndRotation(fallback.position, fallback.rotation);
+                }
+            }
+
+            _spawn = spawn.transform;
+        }
+
+        [ContextMenu("Move XR Rig To Spawn")]
+        public void MoveXRRigToSpawn()
+        {
+            if (XRRig && _spawn)
+                XRRig.transform.SetPositionAndRotation(_spawn.position, _spawn.rotation);
         }
     }
 }
