@@ -1,6 +1,8 @@
 using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.UI;
 
 namespace ArtEye
 {
@@ -45,6 +47,8 @@ namespace ArtEye
         {
             DestroyOtherRigsAndFindSpawn();
             MoveXRRigToSpawn();
+
+            RemoveDuplicateDependencies();
 
             XRRig.SetActive(false);
             XRRig.SetActive(true);
@@ -102,6 +106,22 @@ namespace ArtEye
         {
             if (XRRig && _spawn)
                 XRRig.transform.SetPositionAndRotation(_spawn.position, _spawn.rotation);
+        }
+
+        private void RemoveDuplicateDependencies()
+        {
+            var inputSystems = FindObjectsByType<XRUIInputModule>(FindObjectsSortMode.InstanceID);
+            var xrInteractionManagers = FindObjectsByType<XRInteractionManager>(FindObjectsSortMode.InstanceID);
+
+            for (int i = 1; i < inputSystems.Length; i++)
+            {
+                Destroy(inputSystems[i].gameObject);
+            }
+
+            for (int i = 1; i < xrInteractionManagers.Length; i++)
+            {
+                Destroy(xrInteractionManagers[i].gameObject);
+            }
         }
     }
 }
