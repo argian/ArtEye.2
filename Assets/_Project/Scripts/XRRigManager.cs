@@ -23,6 +23,19 @@ namespace ArtEye
             SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
         }
 
+        private void SetupXRRig()
+        {
+            if (!XRRigPrefab || XRRig)
+                return;
+
+            XRRig = Instantiate(XRRigPrefab, transform);
+            XRRig.name = XRRigPrefab.name;
+
+        #if PLATFORM_STANDALONE || UNITY_EDITOR
+            gameObject.AddComponent(typeof(XRDeviceSimulatorStarter));
+        #endif
+        }
+
         private void OnDisable()
         {
             SceneManager.activeSceneChanged -= SceneManager_activeSceneChanged;
@@ -40,15 +53,6 @@ namespace ArtEye
 
             XRRig.SetActive(false);
             XRRig.SetActive(true);
-        }
-
-        private void SetupXRRig()
-        {
-            if (!XRRigPrefab || XRRig)
-                return;
-
-            XRRig = Instantiate(XRRigPrefab, transform);
-            XRRig.name = XRRigPrefab.name;
         }
 
         private void DestroyOtherRigsAndFindSpawn()
