@@ -16,12 +16,17 @@ namespace ArtEye
     #if UNITY_EDITOR
         public void AddEntriesToSceneList()
         {
+            if (!IncludeInBuild)
+                return;
+
             List<EditorBuildSettingsScene> sceneList = new(EditorBuildSettings.scenes);
 
             foreach (var entry in Entries)
             {
-                bool enabled = IncludeInBuild && entry.IncludeInBuild;
-                sceneList.Add(new EditorBuildSettingsScene(entry.ScenePath, enabled));
+                if (entry == null || !entry.IsValid)
+                    continue;
+
+                sceneList.Add(new EditorBuildSettingsScene(entry.ScenePath, entry.IncludeInBuild));
             }
 
             EditorBuildSettings.scenes = sceneList.ToArray();
