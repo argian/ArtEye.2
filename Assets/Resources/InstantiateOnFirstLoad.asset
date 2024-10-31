@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: InstantiateOnFirstLoad
   m_EditorClassIdentifier: 
   prefabs:
+  - {fileID: 3673064372707590611, guid: 68bd69d6f265a7a49bac216927878f89, type: 3}
   - {fileID: 1638581890480727669, guid: 01d7f15bd4350b54a9f081752a42cbe5, type: 3}
