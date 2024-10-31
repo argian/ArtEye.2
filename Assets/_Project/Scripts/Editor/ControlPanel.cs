@@ -14,9 +14,10 @@ namespace ArtEye.Editor
 
         private Vector2 _scroll;
 
-        private const string WINDOW_NAME = "Control Panel";
+        public const string WINDOW_NAME = "Control Panel";
+        public const string WINDOW_PATH = "Tools/ArtEye/" + WINDOW_NAME;
 
-        [MenuItem("Tools/ArtEye/" + WINDOW_NAME)]
+        [MenuItem(WINDOW_PATH)]
         public static void ShowWindow()
         {
             var window = GetWindow<ControlPanel>(WINDOW_NAME);
