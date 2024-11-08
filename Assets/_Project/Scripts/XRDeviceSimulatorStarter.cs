@@ -6,9 +6,13 @@ namespace ArtEye
 {
     public class XRDeviceSimulatorStarter : MonoBehaviour
     {
-        [SerializeField] private GameObject XRDeviceSimulatorPrefab;
-
+        private GameObject _simulatorPrefab;
         private GameObject _activeSimulator;
+
+        public void SetPrefab(GameObject simulatorPrefab)
+        {
+            _simulatorPrefab = simulatorPrefab;
+        }
 
         private async void Start()
         {
@@ -20,11 +24,11 @@ namespace ArtEye
 
         private void SetupSimulator()
         {
-            if (!XRDeviceSimulatorPrefab)
+            if (!_simulatorPrefab)
                 return;
 
-            _activeSimulator = Instantiate(XRDeviceSimulatorPrefab, transform);
-            _activeSimulator.name = XRDeviceSimulatorPrefab.name;
+            _activeSimulator = Instantiate(_simulatorPrefab, transform);
+            _activeSimulator.name = _simulatorPrefab.name;
         }
 
         [ContextMenu("Reset Simulator")]
