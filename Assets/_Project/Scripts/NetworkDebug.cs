@@ -11,6 +11,10 @@ namespace ArtEye
         [Space]        
         [SerializeField] private GameObject disconnectButton;
 
+    #if !(UNITY_EDITOR || DEVELOPMENT_BUILD)
+        private void Awake() => Destroy(gameObject);
+    #endif
+
         public void StartHost()
         {
             NetworkManager.Singleton.StartHost();
