@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7516918829609044775}
   - component: {fileID: 4611126602556208538}
   m_Layer: 0
-  m_Name: HandRight
+  m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -442,8 +442,8 @@ MonoBehaviour:
   ShowTopMostFoldoutHeaderGroup: 1
   gfx: {fileID: 1815917424317629592}
   head: {fileID: 3600661543334041202}
-  handLeft: {fileID: 4772914429935632022}
-  handRight: {fileID: 1415778627105141952}
+  leftHand: {fileID: 4772914429935632022}
+  rightHand: {fileID: 1415778627105141952}
 --- !u!114 &4398754656037178324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 5666571616034971920}
   - component: {fileID: 8555191564542528638}
   m_Layer: 0
-  m_Name: HandLeft
+  m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

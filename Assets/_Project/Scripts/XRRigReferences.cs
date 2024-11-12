@@ -1,5 +1,6 @@
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.XR.Hands;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 namespace ArtEye
@@ -8,49 +9,79 @@ namespace ArtEye
     {
         public Transform Origin { get; private set; }
         public Transform Head { get; private set; }
-        public Transform HandLeft { get; private set; }
-        public Transform HandRight { get; private set; }
+        public Transform LeftHand { get; private set; }
+        public Transform RightHand { get; private set; }
 
-        private XROrigin _xrOrigin;
-        private XRInputModalityManager _xrInput;
+        private Transform _leftController;
+        private Transform _rightController;
+
+        private Transform _leftHand;
+        private Transform _rightHand;
 
         private void Awake()
         {
-            _xrOrigin = GetComponent<XROrigin>();
-            _xrInput = GetComponent<XRInputModalityManager>();
+            var xrOrigin = GetComponent<XROrigin>();
+            var xrInput = GetComponent<XRInputModalityManager>();
 
-            AssignOriginAndHead();
+            AssignOriginAndHead(xrOrigin);
+
+            AssignControllers(xrInput);
+            AssignHands(xrInput);
         }
 
-        private void AssignOriginAndHead()
+        private void AssignOriginAndHead(XROrigin xrOrigin)
         {
-            if (!_xrOrigin)
+            if (!xrOrigin)
                 return;
 
-            Origin = _xrOrigin.Origin.transform;
-            Head = _xrOrigin.Camera.transform;
+            Origin = xrOrigin.Origin.transform;
+            Head = xrOrigin.Camera.transform;
         }
 
-        public void AssignHands()
+        private void AssignControllers(XRInputModalityManager xrInput)
         {
-            if (!_xrInput)
+            if (!xrInput)
                 return;
 
-            Debug.Log("Assign Hands");
+            var leftController = xrInput.leftController;
+            if (leftController)
+                _leftController = leftController.transform;
 
-            HandLeft = _xrInput.leftHand.transform;
-            HandRight = _xrInput.rightHand.transform;
+            var rightController = xrInput.rightController;
+            if (rightController)
+                _rightController = rightController.transform;
         }
 
-        public void AssignControllers()
+        private void AssignHands(XRInputModalityManager xrInput)
         {
-            if (!_xrInput)
+            if (!xrInput)
                 return;
 
-            Debug.Log("Assign Controllers");
+            var leftHandDriver = xrInput.leftHand.GetComponentInChildren<XRHandSkeletonDriver>();
+            if (leftHandDriver)
+                _leftHand = leftHandDriver.rootTransform;
 
-            HandLeft = _xrInput.leftController.transform;
-            HandRight = _xrInput.rightController.transform;
+            var rightHandDriver = xrInput.rightHand.GetComponentInChildren<XRHandSkeletonDriver>();
+            if (rightHandDriver)
+                _rightHand = rightHandDriver.rootTransform;
+        }
+
+        public void OnTrackedHandMode()
+        {
+            if (!_leftHand || !_rightHand)
+                return;
+
+            LeftHand = _leftHand;
+            RightHand = _rightHand;
+        }
+
+        public void OnMotionControllerMode()
+        {
+            if (!_leftController || !_rightController)
+                return;
+
+            LeftHand = _leftController;
+            RightHand = _rightController;
         }
     }
 }

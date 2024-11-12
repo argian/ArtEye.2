@@ -9,8 +9,8 @@ namespace ArtEye
 
         [Space]
         [SerializeField] private Transform head;
-        [SerializeField] private Transform handLeft;
-        [SerializeField] private Transform handRight;
+        [SerializeField] private Transform leftHand;
+        [SerializeField] private Transform rightHand;
 
         private GameObject _xrRig;
         private XRRigReferences _xrRigRefs;
@@ -42,8 +42,8 @@ namespace ArtEye
             CopyPositionAndRotation(_xrRigRefs.Origin, transform);
 
             CopyPositionAndRotation(_xrRigRefs.Head, head);
-            CopyPositionAndRotation(_xrRigRefs.HandLeft, handLeft);
-            CopyPositionAndRotation(_xrRigRefs.HandRight, handRight);
+            CopyPositionAndRotation(_xrRigRefs.LeftHand, leftHand);
+            CopyPositionAndRotation(_xrRigRefs.RightHand, rightHand);
         }
 
         private void CopyPositionAndRotation(Transform from, Transform to)
