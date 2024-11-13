@@ -1,4 +1,6 @@
+using TMPro;
 using Unity.Netcode;
+using Unity.Netcode.Transports.UTP;
 using UnityEngine;
 
 namespace ArtEye
@@ -7,7 +9,8 @@ namespace ArtEye
     {
         [SerializeField] private GameObject startHostButton;
         [SerializeField] private GameObject startClientButton;
-        
+        [SerializeField] private TMP_InputField ipAddress;
+
         [Space]        
         [SerializeField] private GameObject disconnectButton;
 
@@ -18,32 +21,35 @@ namespace ArtEye
         public void StartHost()
         {
             NetworkManager.Singleton.StartHost();
-            ToggleButtons();
+            ToggleInputs();
         }
 
         public void StartClient()
         {
             NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnectCallback;
+            NetworkManager.Singleton.GetComponent<UnityTransport>()
+                                    .SetConnectionData(ipAddress.text, 7777);
             NetworkManager.Singleton.StartClient();
-            ToggleButtons();
+            ToggleInputs();
         }
 
         private void OnClientDisconnectCallback(ulong obj)
         {
-            ToggleButtons();
+            ToggleInputs();
         }
 
         public void Disconnect()
         {
             NetworkManager.Singleton.OnClientDisconnectCallback -= OnClientDisconnectCallback;
             NetworkManager.Singleton.Shutdown();
-            ToggleButtons();
+            ToggleInputs();
         }
 
-        private void ToggleButtons()
+        private void ToggleInputs()
         {
             startHostButton.SetActive(!startHostButton.activeSelf);
             startClientButton.SetActive(!startClientButton.activeSelf);
+            ipAddress.gameObject.SetActive(!ipAddress.gameObject.activeSelf);
 
             disconnectButton.SetActive(!disconnectButton.activeSelf);
         }
