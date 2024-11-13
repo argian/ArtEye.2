@@ -23,9 +23,17 @@ namespace ArtEye
 
         private void Start()
         {
-            if (!IsOwner)
-                return;
+            name = $"Player {OwnerClientId}";
 
+            if (IsOwner)
+                DisableMeshRenderers();
+
+            if (IsServer && TryGetComponent<NetworkObject>(out var networkObject))
+                networkObject.TrySetParent(NetworkObjects.Instance.Root);
+        }
+
+        private void DisableMeshRenderers()
+        {
             var meshes = gfx.GetComponentsInChildren<MeshRenderer>();
 
             foreach (var mesh in meshes)
