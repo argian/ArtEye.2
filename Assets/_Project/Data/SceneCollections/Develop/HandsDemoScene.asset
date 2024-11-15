@@ -15,4 +15,5 @@ MonoBehaviour:
   <SceneAsset>k__BackingField: {fileID: 102900000, guid: 3ff35cecbcc52cc42945cf531638a60a, type: 3}
   <ScenePath>k__BackingField: Assets/Samples/XR Interaction Toolkit/3.0.6/Hands Interaction
     Demo/HandsDemoScene.unity
+  <SceneHash>k__BackingField: 1559450338
   <IncludeInBuild>k__BackingField: 0

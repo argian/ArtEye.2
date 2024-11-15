@@ -18,10 +18,10 @@ namespace ArtEye
 
         public void Init(SceneLink sceneLink)
         {
-            _sceneHash.Value = sceneLink.SceneHash;
-            
             NetworkObject.Spawn();
             NetworkObject.TrySetParent(NetworkObjects.Instance.NetworkObject);
+
+            _sceneHash.Value = sceneLink.SceneHash;
         }
 
         public void Attach(NetworkObject networkObject)
