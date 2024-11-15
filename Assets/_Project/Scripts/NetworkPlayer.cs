@@ -28,8 +28,8 @@ namespace ArtEye
             if (IsOwner)
                 DisableMeshRenderers();
 
-            if (IsServer && TryGetComponent<NetworkObject>(out var networkObject))
-                networkObject.TrySetParent(NetworkObjects.Instance.Root);
+            if (IsServer)
+                NetworkObject.TrySetParent(NetworkObjects.Instance.NetworkObject);
         }
 
         private void DisableMeshRenderers()

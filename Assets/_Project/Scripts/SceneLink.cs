@@ -13,6 +13,8 @@ namespace ArtEye
     #endif
 
         [field: SerializeField, Space] public string ScenePath { get; private set; }
+
+        public int SceneHash => Animator.StringToHash(ScenePath);
         
         [field: SerializeField] public bool IncludeInBuild { get; private set; }
 
