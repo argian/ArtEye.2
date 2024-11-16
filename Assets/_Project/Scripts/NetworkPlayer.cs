@@ -21,15 +21,35 @@ namespace ArtEye
             _xrRigRefs = _xrRig.GetComponent<XRRigReferences>();
         }
 
-        private void Start()
+        public override void OnNetworkSpawn()
         {
+            base.OnNetworkSpawn();
+
             name = $"Player {OwnerClientId}";
 
-            if (IsOwner)
-                DisableMeshRenderers();
+            if (!IsOwner)
+                return;
 
-            if (IsServer)
-                NetworkObject.TrySetParent(NetworkObjects.Instance.NetworkObject);
+            DisableMeshRenderers();
+            //AttachToActiveContainer();
+
+            NetworkObjects.OnActiveContainerChanged += AttachToActiveContainer;
+        }
+
+        public override void OnNetworkDespawn()
+        {
+            base.OnNetworkDespawn();
+
+            if (!IsOwner)
+                return;
+
+            NetworkObjects.OnActiveContainerChanged -= AttachToActiveContainer;
+        }
+
+        void AttachToActiveContainer()
+        {
+            if (NetworkObjects.Instance)
+                NetworkObjects.Instance.AttachToActiveContainer(NetworkObject);
         }
 
         private void DisableMeshRenderers()

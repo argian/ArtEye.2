@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
@@ -7,41 +8,37 @@ namespace ArtEye
 {
     public class NetworkObjects : NetworkSingleton<NetworkObjects>
     {
+        public static Action OnActiveContainerChanged;
+
         [SerializeField] private SceneContainer containerPrefab;
 
         private SceneLink _activeScene;
+        private SceneContainer _activeContainer;
 
         private readonly Dictionary<SceneLink, SceneContainer> _sceneContainerRegistry = new();
 
-        protected override void Awake()
+        public override void OnNetworkSpawn()
         {
-            base.Awake();
+            base.OnNetworkSpawn();
 
             name = "Network Objects";
-        }
 
-        private void Start()
-        {
             if (!NetworkManager.IsClient)
                 return;
 
             var activeScenePath = SceneManager.GetActiveScene().path;
             _activeScene = SceneCollections.GetSceneLink(activeScenePath);
 
-            ShowContainerRpc(_activeScene.SceneHash, NetworkManager.LocalClientId);
-        }
-
-        private void OnEnable()
-        {
-            if (!NetworkManager.IsClient)
-                return;
+            TryCreateNewContainerRpc(_activeScene.SceneHash);
 
             SceneLoader.OnLoadStart += OnSceneLoadStart;
             SceneLoader.OnLoadEnd += OnSceneLoadEnd;
         }
 
-        private void OnDisable()
+        public override void OnNetworkDespawn()
         {
+            base.OnNetworkDespawn();
+
             if (!NetworkManager.IsClient)
                 return;
 
@@ -51,41 +48,65 @@ namespace ArtEye
 
         private void OnSceneLoadStart(SceneLink sceneLink)
         {
-            HideContainerRpc(_activeScene.SceneHash, NetworkManager.LocalClientId);
             _activeScene = sceneLink;
+            TryCreateNewContainerRpc(_activeScene.SceneHash);
         }
 
         private void OnSceneLoadEnd()
         {
-            ShowContainerRpc(_activeScene.SceneHash, NetworkManager.LocalClientId);
+            TryUpdateActiveContainer();
         }
 
         [Rpc(SendTo.Server)]
-        private void ShowContainerRpc(int sceneHash, ulong clientID)
+        private void TryCreateNewContainerRpc(int sceneHash)
         {
             var sceneLink = SceneCollections.GetSceneLink(sceneHash);
 
-            if (!_sceneContainerRegistry.TryGetValue(sceneLink, out var container))
-            {
-                container = Instantiate(containerPrefab, transform);
-                container.Init(sceneLink);
-            }
+            if (_sceneContainerRegistry.TryGetValue(sceneLink, out _))
+                return;
 
-            container.Show(clientID);
+            SceneContainer container = Instantiate(containerPrefab, transform);
+            container.Init(sceneLink);
+        }
+
+        public void AttachToActiveContainer(NetworkObject networkObject)
+        {
+            AttachToContainerRpc(_activeContainer, networkObject);
         }
 
         [Rpc(SendTo.Server)]
-        private void HideContainerRpc(int sceneHash, ulong clientID)
+        private void AttachToContainerRpc(NetworkBehaviourReference sceneContainerRef, 
+                                          NetworkObjectReference networkObjectRef)
         {
-            var sceneLink = SceneCollections.GetSceneLink(sceneHash);
-
-            if (_sceneContainerRegistry.TryGetValue(sceneLink, out var container))
-                container.Hide(clientID);
+            if (sceneContainerRef.TryGet(out SceneContainer sceneContainer))
+                ((NetworkObject)networkObjectRef).TrySetParent(sceneContainer.NetworkObject);
+            else
+                ((NetworkObject)networkObjectRef).TrySetParent(NetworkObject);
         }
 
         public void AddContainer(SceneContainer container)
         {
-            _sceneContainerRegistry.TryAdd(container.SceneLink, container);
+            if (_sceneContainerRegistry.TryAdd(container.SceneLink, container))
+                container.gameObject.SetActive(false);
+
+            TryUpdateActiveContainer();
+        }
+
+        private void TryUpdateActiveContainer()
+        {
+            if (!_sceneContainerRegistry.TryGetValue(_activeScene, out var activeContainer))
+                return;
+
+            if (_activeContainer == activeContainer)
+                return;
+
+            if (_activeContainer)
+                _activeContainer.gameObject.SetActive(false);
+            
+            _activeContainer = activeContainer;
+            _activeContainer.gameObject.SetActive(true);
+            
+            OnActiveContainerChanged?.Invoke();
         }
     }
 }

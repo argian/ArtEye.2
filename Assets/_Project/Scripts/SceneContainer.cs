@@ -23,20 +23,5 @@ namespace ArtEye
 
             _sceneHash.Value = sceneLink.SceneHash;
         }
-
-        public void Attach(NetworkObject networkObject)
-        {
-            networkObject.TrySetParent(NetworkObject);
-        }
-
-        public void Show(ulong clientID)
-        {
-            NetworkObject.NetworkShow(clientID);
-        }
-
-        public void Hide(ulong clientID)
-        {
-            NetworkObject.NetworkHide(clientID);
-        }
     }
 }
