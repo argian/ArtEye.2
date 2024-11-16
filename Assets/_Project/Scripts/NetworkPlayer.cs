@@ -31,7 +31,6 @@ namespace ArtEye
                 return;
 
             DisableMeshRenderers();
-            //AttachToActiveContainer();
 
             NetworkObjects.OnActiveContainerChanged += AttachToActiveContainer;
         }
