@@ -13,6 +13,8 @@ namespace ArtEye
     #endif
 
         [field: SerializeField, Space] public string ScenePath { get; private set; }
+
+        [field: SerializeField, HideInInspector] public int SceneHash { get; private set; }
         
         [field: SerializeField] public bool IncludeInBuild { get; private set; }
 
@@ -33,6 +35,7 @@ namespace ArtEye
                 return;
 
             ScenePath = newPath;
+            SceneHash = Animator.StringToHash(ScenePath);
 
             AssetDatabase.RenameAsset(AssetDatabase.GetAssetPath(this), SceneAsset.name);
         }

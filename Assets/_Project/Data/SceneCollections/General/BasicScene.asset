@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <SceneAsset>k__BackingField: {fileID: 102900000, guid: 4e9fef26e6adb88479ad1b9834a32d94, type: 3}
   <ScenePath>k__BackingField: Assets/Scenes/BasicScene.unity
+  <SceneHash>k__BackingField: 973332730
   <IncludeInBuild>k__BackingField: 1

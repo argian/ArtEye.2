@@ -12,6 +12,10 @@ namespace ArtEye
 
         [SerializeField] private GameObject XRRigPrefab;
 
+    #if PLATFORM_STANDALONE || UNITY_EDITOR
+        [SerializeField] private GameObject XRDeviceSimulatorPrefab;
+    #endif
+
         [Space]
         [SerializeField] private GameObject spawnPrefab;
 
@@ -32,7 +36,11 @@ namespace ArtEye
             XRRig.name = XRRigPrefab.name;
 
         #if PLATFORM_STANDALONE || UNITY_EDITOR
-            gameObject.AddComponent(typeof(XRDeviceSimulatorStarter));
+            if (!XRDeviceSimulatorPrefab)
+                return;
+
+            gameObject.AddComponent<XRDeviceSimulatorStarter>()
+                      .SetPrefab(XRDeviceSimulatorPrefab);
         #endif
         }
 

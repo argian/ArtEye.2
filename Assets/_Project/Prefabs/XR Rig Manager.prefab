@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyOnLoad: 1
   XRRigPrefab: {fileID: 6989965862383295362, guid: e43eed0957b1ec545970e25226ddd4a7, type: 3}
+  XRDeviceSimulatorPrefab: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
   spawnPrefab: {fileID: 0}
 --- !u!1 &3745566318074196701
 GameObject:
