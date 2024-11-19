@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a72c061a196fcd459e7d27f59185cd7, type: 3}
+  m_Name: 01 Malewicz
+  m_EditorClassIdentifier: 
+  <SceneAsset>k__BackingField: {fileID: 102900000, guid: aa2d885914ea3eb4e8db0737ab533fe3, type: 3}
+  <ScenePath>k__BackingField: Assets/_Project/Scenes/01 Malewicz.unity
+  <SceneHash>k__BackingField: 1047194383
+  <IncludeInBuild>k__BackingField: 0
