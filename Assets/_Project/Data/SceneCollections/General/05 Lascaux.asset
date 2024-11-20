@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a72c061a196fcd459e7d27f59185cd7, type: 3}
+  m_Name: 05 Lascaux
+  m_EditorClassIdentifier: 
+  <SceneAsset>k__BackingField: {fileID: 102900000, guid: 9655d016056bc90418182301356172eb, type: 3}
+  <ScenePath>k__BackingField: Assets/_Project/Scenes/05 Lascaux.unity
+  <SceneHash>k__BackingField: 642641214
+  <IncludeInBuild>k__BackingField: 0
