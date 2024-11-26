@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4766ee-0fba-42eb-87e4-b8858d393249" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/General/Scripts/Teleporters/TeleporterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/General/Scripts/Teleporters/TeleporterBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Prefabs/ArtEye XR Origin (XR Rig).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Prefabs/ArtEye XR Origin (XR Rig).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/00 Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/00 Lobby.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/01 Malewicz.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/01 Malewicz.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/02 Warhol.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/02 Warhol.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/03 Dali.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/03 Dali.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/04 DaVinci.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/04 DaVinci.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/05 Lascaux.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/05 Lascaux.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/06 Velasquez.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/06 Velasquez.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/07 Dyskobol.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/07 Dyskobol.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732623125991</updated>
       <workItem from="1732623127759" duration="3056000" />
-      <workItem from="1732626431458" duration="3047000" />
+      <workItem from="1732626431458" duration="3874000" />
     </task>
     <servers />
   </component>
