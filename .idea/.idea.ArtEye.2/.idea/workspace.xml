@@ -5,27 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4766ee-0fba-42eb-87e4-b8858d393249" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ArtEye.2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ArtEye.2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/BlackSquare Painting.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/BlackSquare Painting.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/CampbellsSoupCans Painting.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/CampbellsSoupCans Painting.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/GreatWaveOffKanagawa Painting.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/GreatWaveOffKanagawa Painting.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/LascauxPaintings Painting.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/LascauxPaintings Painting.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/RoomPaintingTeleporter.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/RoomPaintingTeleporter.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/TheLastSupper Painting.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/TheLastSupper Painting.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/ThePersistenceOfMemory Painting.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/00 Lobby/Prefabs/Paintings/ThePersistenceOfMemory Painting.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/General/Scripts/Teleporters/SceneTeleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/General/Scripts/Teleporters/SceneTeleporter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/General/Prefabs/Teleporters/RoomTeleporter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/General/Prefabs/Teleporters/RoomTeleporter.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/General/Scripts/Teleporters/Teleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/General/Scripts/Teleporters/Teleporter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/General/Scripts/Teleporters/TeleporterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/General/Scripts/Teleporters/TeleporterBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Scenes/00 Lobby.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Scenes/00 Lobby.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732623125991</updated>
       <workItem from="1732623127759" duration="3056000" />
-      <workItem from="1732626431458" duration="1710000" />
+      <workItem from="1732626431458" duration="2358000" />
     </task>
     <servers />
   </component>

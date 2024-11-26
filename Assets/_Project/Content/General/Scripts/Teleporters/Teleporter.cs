@@ -5,6 +5,8 @@ namespace ArtEye.Teleportation
 {
     public class Teleporter : TeleporterBase {
         
+        [field: SerializeField] public Transform TeleporterExit { get; set; }
+        
         [SerializeField] private Teleporter linkedTeleporter;
         
         protected override UniTask Teleport(GameObject playerObject) {

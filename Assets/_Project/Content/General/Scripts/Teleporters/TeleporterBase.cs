@@ -10,8 +10,6 @@ namespace ArtEye.Teleportation
     public abstract class TeleporterBase : MonoBehaviour
     {
         private static bool TeleportationInProgress { get; set; }
-
-        [field: SerializeField] public Transform TeleporterExit { get; set; }
         
         [SerializeField] protected XRBaseInteractable xrGrabInteractable;
 
