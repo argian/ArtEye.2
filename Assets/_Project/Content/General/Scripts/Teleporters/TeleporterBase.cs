@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
-namespace ArtEye
+namespace ArtEye.Teleportation
 {
     public abstract class TeleporterBase : MonoBehaviour
     {
@@ -13,7 +13,7 @@ namespace ArtEye
 
         [field: SerializeField] public Transform TeleporterExit { get; set; }
         
-        [SerializeField] protected XRGrabInteractable xrGrabInteractable;
+        [SerializeField] protected XRBaseInteractable xrGrabInteractable;
 
         private Sequence sequence;
         

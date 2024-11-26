@@ -1,7 +1,7 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace ArtEye
+namespace ArtEye.Teleportation
 {
     public class SceneTeleporter : TeleporterBase
     {
@@ -9,6 +9,12 @@ namespace ArtEye
         
         protected override async UniTask Teleport(GameObject playerObject)
         {
+            if (!sceneToLoad)
+            {
+                Debug.LogError("Can't teleport! No scene to load set!", this);
+                return;
+            }
+
             await SceneLoader.Instance.LoadSceneAsync(sceneToLoad);
         }
     }
