@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4766ee-0fba-42eb-87e4-b8858d393249" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/General/Prefabs/Teleporters/RoomTeleporter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/General/Prefabs/Teleporters/RoomTeleporter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/General/Scripts/Teleporters/Teleporter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/General/Scripts/Teleporters/Teleporter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Project/Content/General/Scripts/Teleporters/TeleporterBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Project/Content/General/Scripts/Teleporters/TeleporterBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732623125991</updated>
       <workItem from="1732623127759" duration="3056000" />
-      <workItem from="1732626431458" duration="2358000" />
+      <workItem from="1732626431458" duration="3047000" />
     </task>
     <servers />
   </component>
