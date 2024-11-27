@@ -1,4 +1,3 @@
-using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace ArtEye.Teleportation
@@ -6,8 +5,8 @@ namespace ArtEye.Teleportation
     public class SceneTeleporter : TeleporterBase
     {
         [SerializeField] private SceneLink sceneToLoad;
-        
-        protected override async UniTask Teleport(GameObject playerObject)
+
+        protected override void Teleport(GameObject playerObject)
         {
             if (!sceneToLoad)
             {
@@ -15,7 +14,7 @@ namespace ArtEye.Teleportation
                 return;
             }
 
-            await SceneLoader.Instance.LoadSceneAsync(sceneToLoad);
+            SceneLoader.Instance.LoadScene(sceneToLoad);
         }
     }
 }

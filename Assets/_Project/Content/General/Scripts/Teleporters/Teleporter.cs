@@ -1,4 +1,3 @@
-using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace ArtEye.Teleportation
@@ -9,16 +8,16 @@ namespace ArtEye.Teleportation
         
         [SerializeField] private Teleporter linkedTeleporter;
         
-        protected override UniTask Teleport(GameObject playerObject) {
+        protected override void Teleport(GameObject playerObject) {
             if (!linkedTeleporter)
             {
                 Debug.LogError("Can't teleport! No linked teleporter set!", this);
-                return UniTask.CompletedTask;
+                return;
             }
 
             playerObject.transform.position = linkedTeleporter.TeleporterExit.position;
             playerObject.transform.rotation = linkedTeleporter.TeleporterExit.rotation;
-            return UniTask.CompletedTask;
+            OnTeleportationEnd?.Invoke();
         }
     }
 }

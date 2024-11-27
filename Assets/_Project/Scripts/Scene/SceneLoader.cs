@@ -32,7 +32,7 @@ namespace ArtEye
             LoadSceneAsync(link).Forget();
         }
 
-        public async UniTask LoadSceneAsync(SceneLink link)
+        private async UniTask LoadSceneAsync(SceneLink link)
         {
             _loading = true;
             OnLoadStart?.Invoke(link);

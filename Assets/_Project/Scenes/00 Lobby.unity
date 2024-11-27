@@ -287,6 +287,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4998234482509243770, guid: 6223f3d4240e9da44894ba390db60e68, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.101
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998234482509243770, guid: 6223f3d4240e9da44894ba390db60e68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.765
+      objectReference: {fileID: 0}
     - target: {fileID: 8308571658780253793, guid: 6223f3d4240e9da44894ba390db60e68, type: 3}
       propertyPath: m_Name
       value: Sponza_Modular
