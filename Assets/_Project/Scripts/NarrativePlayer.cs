@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 namespace ArtEye
 {
@@ -7,130 +8,87 @@ namespace ArtEye
     [RequireComponent(typeof(Collider))]
     public class NarrativePlayer : MonoBehaviour
     {
-        // These shouldn't be public but it is what it is...
-        public GameObject container;
-
+        // TODO make private
+        [SerializeField] private GameObject container;
         public AudioSource audioSource;
-
-        public GameObject textCanvas;
-
+        [SerializeField] private GameObject textScrollView;
         public TMP_Text textComponent;
+        [SerializeField] private Image playButtonImage;
+        [SerializeField] private Slider seekSlider;
 
-        public GameObject playButton;
-
-        public GameObject pauseButton;
+        [SerializeField] private Sprite playIcon;
+        [SerializeField] private Sprite pauseIcon;
+        [SerializeField] private Sprite replayIcon;
 
         [Space] public bool hideText = true;
 
-        public bool autoResume = false;
+        [SerializeField] private bool autoResume;
 
-        bool _isPlaying = false;
-
-        float _playbackTime = 0;
-
+        private bool _isPlaying;
+        private float _playbackTime;
+        private bool _showSubtitles;
 
 #if UNITY_EDITOR
         [Space, TextArea(10, 25)] public string text;
-
         [Space] public AudioClip clip;
 #endif
 
-        void Start()
+        private void OnDisable()
+        {
+            audioSource.Stop();
+        }
+
+        private void Start()
         {
             StopAndHidePlayer();
-
-            if (hideText)
-                HideText();
         }
 
-        // FIXME old udon code
-        /*
-        public override void OnPlayerTriggerEnter(VRCPlayerApi player)
+        private void Update()
         {
-            base.OnPlayerTriggerEnter(player);
-
-            if (!player.isLocal)
-                return;
-
-            ShowPlayerAndResume();
+            if (audioSource.isPlaying)
+                seekSlider.SetValueWithoutNotify(audioSource.time / audioSource.clip.length);
         }
-        */
 
-        // FIXME old udon code
-        /*
-        public override void OnPlayerTriggerExit(VRCPlayerApi player)
-        {
-            base.OnPlayerTriggerExit(player);
-
-            if (!player.isLocal)
-                return;
-
-            StopAndHidePlayer();
-        }
-        */
-
-        void ShowPlayerAndResume()
+        public void ShowPlayerAndResume()
         {
             container.SetActive(true);
 
             if (autoResume && _isPlaying)
                 Play();
-            else
-            {
-                if (playButton)
-                    playButton.SetActive(true);
-                if (pauseButton)
-                    pauseButton.SetActive(false);
-            }
         }
 
-        void StopAndHidePlayer()
+        private void StopAndHidePlayer()
         {
-            if (_isPlaying)
-            {
-                Stop();
-
-                if (_playbackTime < Mathf.Epsilon) // Finished playing
-                    _isPlaying = false;
-            }
+            if (audioSource.isPlaying)
+                audioSource.Stop();
 
             container.SetActive(false);
         }
 
         public void Play()
         {
+            playButtonImage.sprite = pauseIcon;
+            if (Mathf.Approximately(audioSource.time, audioSource.clip.length))
+                _playbackTime = 0;
             audioSource.time = _playbackTime;
             audioSource.Play();
-
-            _isPlaying = true;
-        }
-
-        public void Replay()
-        {
-            _playbackTime = 0;
-            Play();
         }
 
         public void Pause()
         {
-            Stop();
-            _isPlaying = false;
-        }
-
-        void Stop()
-        {
             _playbackTime = audioSource.time;
-            audioSource.Stop();
+            audioSource.Pause();
         }
 
-        public void ShowText()
+        public void ToggleSubtitles()
         {
-            textCanvas.SetActive(true);
+            _showSubtitles = !_showSubtitles;
+            textScrollView.SetActive(_showSubtitles);
         }
 
-        public void HideText()
+        public void Seek(float playbackPercent)
         {
-            textCanvas.SetActive(false);
+            audioSource.time = audioSource.clip.length / playbackPercent;
         }
     }
 }
