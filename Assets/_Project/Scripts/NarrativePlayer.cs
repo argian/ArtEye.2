@@ -65,6 +65,41 @@ namespace ArtEye
         {
             if (_isVisible && audioSource.isPlaying)
                 UpdatePlaybackSliderAndText();
+
+            if (Mathf.Approximately(audioSource.time, audioSource.clip.length))
+                playButtonImage.sprite = replayIcon;
+        }
+        
+        private void OnTriggerExit(Collider other)
+        {
+            HidePlayer();
+        }
+        
+        public void ToggleVisibility()
+        {
+            if (_isVisible)
+                HidePlayer();
+            else
+                ShowPlayer();
+
+            _isVisible = !_isVisible;
+        }
+
+        public void TogglePlay()
+        {
+            if (audioSource.isPlaying)
+                Pause();
+            else
+                PlayOrRestart();
+        }
+
+        public void ToggleSubtitles()
+        {
+            _showSubtitles = !_showSubtitles;
+            if (_showSubtitles)
+                _showSubtitlesAnimation.PlayForward();
+            else
+                _showSubtitlesAnimation.PlayBackwards();
         }
 
         private void UpdatePlaybackSliderAndText()
@@ -76,49 +111,26 @@ namespace ArtEye
             playbackTimeText.text = $"{minutes:00}:{seconds:00}";
         }
 
-        public void ToggleVisibility()
-        {
-            Debug.Log("Toggle visibility");
-            if (_isVisible)
-                HidePlayer();
-            else
-                ShowPlayer();
-
-            _isVisible = !_isVisible;
-        }
-
         private async void ShowPlayer()
         {
-            Debug.Log("Show player");
             _showContainerAnimation.PlayForward();
             await _showContainerAnimation.AsyncWaitForCompletion();
 
-            Play();
+            PlayOrRestart();
         }
 
         private void HidePlayer()
         {
-            Debug.Log("Hide player");
             if (audioSource.isPlaying)
                 audioSource.Stop();
             
             _showContainerAnimation.PlayBackwards();
         }
 
-        public void PlayPauseRestart()
+        private void PlayOrRestart()
         {
-            Debug.Log("PlayPauseRestart");
-            if (audioSource.isPlaying)
-                Pause();
-            else
-                Play();
-        }
-
-        private void Play()
-        {
-            Debug.Log("Play");
             playButtonImage.sprite = pauseIcon;
-            if (Mathf.Approximately(audioSource.time, audioSource.clip.length))
+            if (audioSource.time == 0)
                 _playbackTime = 0;
             audioSource.time = _playbackTime;
             audioSource.Play();
@@ -126,32 +138,17 @@ namespace ArtEye
 
         private void Pause()
         {
-            Debug.Log("Pause");
             _playbackTime = audioSource.time;
+            playButtonImage.sprite = playIcon;
             audioSource.Pause();
-        }
-
-        public void ToggleSubtitles()
-        {
-            Debug.Log("Toggle subtitles");
-            _showSubtitles = !_showSubtitles;
-            if (_showSubtitles)
-                _showSubtitlesAnimation.PlayForward();
-            else
-                _showSubtitlesAnimation.PlayBackwards();
         }
 
         public void Seek(float playbackPercent)
         {
-            Debug.Log("Seek");
-            audioSource.time = audioSource.clip.length / playbackPercent;
+            audioSource.time = audioSource.clip.length * playbackPercent;
             _playbackTime = audioSource.time;
-        }
-
-        private void OnTriggerExit(Collider other)
-        {
-            Debug.Log("OnTriggerExit");
-            HidePlayer();
+            
+            UpdatePlaybackSliderAndText();
         }
     }
 }

@@ -10,13 +10,14 @@ namespace ArtEye
         [SerializeField] private float spinningSpeed = 45f;
 
         private float _currentSpinningSpeed;
-        private Tweener _clickAnimation;
+        private Sequence _clickAnimation;
 
         protected override void Awake()
         {
             base.Awake();
-            _clickAnimation = transform.DOScale(new Vector3(.8f, .8f, .8f), 0.3f)
-                .SetEase(Ease.OutBounce)
+            _clickAnimation = DOTween.Sequence()
+                .Append(transform.DOScale(new Vector3(0.8f, 0.8f, 0.8f), 0.3f).SetEase(Ease.OutExpo))
+                .Append(transform.DOScale(new Vector3(1f, 1f, 1f), 0.3f).SetEase(Ease.InOutSine))
                 .Pause()
                 .SetAutoKill(false);
         }

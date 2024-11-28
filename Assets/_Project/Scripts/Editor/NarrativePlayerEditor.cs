@@ -58,11 +58,6 @@ namespace ArtEye.Editor
             GUILayout.EndVertical();
 
             GUILayout.EndHorizontal();
-            
-            if (GUILayout.Button("Play", GUILayout.Height(40)))
-                _player.PlayPauseRestart();
-            if (GUILayout.Button("ToggleSubtitles", GUILayout.Height(40)))
-                _player.ToggleSubtitles();
         }
 
         private void CopyTextContent()
@@ -72,28 +67,30 @@ namespace ArtEye.Editor
             _player.text = _playerTextComponent.text;
         }
 
-        void CopyAudioClip()
+        private void CopyAudioClip()
         {
             Undo.RecordObject(_player, "Copy Audio Clip");
             _player.clip = _playerAudioSource.clip;
         }
 
-        void SelectTextComponent()
+        private void SelectTextComponent()
         {
             Undo.RecordObject(Selection.activeGameObject, "Select Text Component");
             Selection.activeGameObject = _playerTextComponent.gameObject;
         }
 
-        void SelectAudioComponent()
+        private void SelectAudioComponent()
         {
             Undo.RecordObject(Selection.activeGameObject, "Select Audio Component");
             Selection.activeGameObject = _playerAudioSource.gameObject;
         }
 
-        void AssignValues()
+        private void AssignValues()
         {
             _playerTextComponent.text = _player.text;
             _playerAudioSource.clip = _player.clip;
+            EditorUtility.SetDirty(_playerTextComponent);
+            EditorUtility.SetDirty(_playerAudioSource);
 
             PrefabUtility.RecordPrefabInstancePropertyModifications(_playerTextComponent);
         }
