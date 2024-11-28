@@ -1,4 +1,6 @@
-﻿using UnityEditor;
+﻿using System.Reflection;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 namespace ArtEye.Editor
@@ -6,11 +8,21 @@ namespace ArtEye.Editor
     [CustomEditor(typeof(NarrativePlayer))]
     public class NarrativePlayerEditor : UnityEditor.Editor
     {
-        NarrativePlayer player;
+        private NarrativePlayer _player;
+        private TMP_Text _playerTextComponent;
+        private AudioSource _playerAudioSource;
 
         void OnEnable()
         {
-            player = (NarrativePlayer)target;
+            _player = (NarrativePlayer)target;
+            
+            FieldInfo audioSourceFieldInfo = typeof(NarrativePlayer).GetField("audioSource", BindingFlags.NonPublic | BindingFlags.Instance);
+            if (audioSourceFieldInfo != null)
+                _playerAudioSource = (AudioSource)audioSourceFieldInfo.GetValue(_player);
+            
+            FieldInfo textComponentFieldInfo = typeof(NarrativePlayer).GetField("textComponent", BindingFlags.NonPublic | BindingFlags.Instance);
+            if (textComponentFieldInfo != null)
+                _playerTextComponent = (TMP_Text)textComponentFieldInfo.GetValue(_player);
         }
 
         public override void OnInspectorGUI()
@@ -46,38 +58,44 @@ namespace ArtEye.Editor
             GUILayout.EndVertical();
 
             GUILayout.EndHorizontal();
+            
+            if (GUILayout.Button("Play", GUILayout.Height(40)))
+                _player.PlayPauseRestart();
+            if (GUILayout.Button("ToggleSubtitles", GUILayout.Height(40)))
+                _player.ToggleSubtitles();
         }
 
-        void CopyTextContent()
+        private void CopyTextContent()
         {
-            Undo.RecordObject(player, "Copy Text Content");
-            player.text = player.textComponent.text;
+            Undo.RecordObject(_player, "Copy Text Content");
+            
+            _player.text = _playerTextComponent.text;
         }
 
         void CopyAudioClip()
         {
-            Undo.RecordObject(player, "Copy Audio Clip");
-            player.clip = player.audioSource.clip;
+            Undo.RecordObject(_player, "Copy Audio Clip");
+            _player.clip = _playerAudioSource.clip;
         }
 
         void SelectTextComponent()
         {
             Undo.RecordObject(Selection.activeGameObject, "Select Text Component");
-            Selection.activeGameObject = player.textComponent.gameObject;
+            Selection.activeGameObject = _playerTextComponent.gameObject;
         }
 
         void SelectAudioComponent()
         {
             Undo.RecordObject(Selection.activeGameObject, "Select Audio Component");
-            Selection.activeGameObject = player.audioSource.gameObject;
+            Selection.activeGameObject = _playerAudioSource.gameObject;
         }
 
         void AssignValues()
         {
-            player.textComponent.text = player.text;
-            player.audioSource.clip = player.clip;
+            _playerTextComponent.text = _player.text;
+            _playerAudioSource.clip = _player.clip;
 
-            PrefabUtility.RecordPrefabInstancePropertyModifications(player.textComponent);
+            PrefabUtility.RecordPrefabInstancePropertyModifications(_playerTextComponent);
         }
     }
 }

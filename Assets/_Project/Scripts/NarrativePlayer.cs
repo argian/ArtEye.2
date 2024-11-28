@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
@@ -8,23 +9,27 @@ namespace ArtEye
     [RequireComponent(typeof(Collider))]
     public class NarrativePlayer : MonoBehaviour
     {
-        // TODO make private
-        [SerializeField] private GameObject container;
-        public AudioSource audioSource;
-        [SerializeField] private GameObject textScrollView;
-        public TMP_Text textComponent;
-        [SerializeField] private Image playButtonImage;
+        // container
+        [SerializeField] private CanvasGroup containerCanvasGroup;
+        
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private TMP_Text textComponent;
+        
+        [SerializeField] private RectTransform textScrollView;
+
+        [SerializeField] private TMP_Text playbackTimeText;
         [SerializeField] private Slider seekSlider;
 
+        // play button
+        [SerializeField] private Image playButtonImage;
         [SerializeField] private Sprite playIcon;
         [SerializeField] private Sprite pauseIcon;
         [SerializeField] private Sprite replayIcon;
 
-        [Space] public bool hideText = true;
+        private Tweener _showContainerAnimation;
+        private Tweener _showSubtitlesAnimation;
 
-        [SerializeField] private bool autoResume;
-
-        private bool _isPlaying;
+        private bool _isVisible;
         private float _playbackTime;
         private bool _showSubtitles;
 
@@ -33,40 +38,85 @@ namespace ArtEye
         [Space] public AudioClip clip;
 #endif
 
-        private void OnDisable()
+        private void Awake()
         {
-            audioSource.Stop();
+            _showContainerAnimation = containerCanvasGroup.DOFade(1f, .3f)
+                .SetEase(Ease.InOutSine)
+                .Pause()
+                .SetAutoKill(false);
+            
+            _showSubtitlesAnimation = textScrollView.DOSizeDelta(new Vector3(0f, 300f, 0f), 1f)
+                .SetEase(Ease.OutSine)
+                .Pause()
+                .SetAutoKill(false);
         }
 
         private void Start()
         {
-            StopAndHidePlayer();
+            if (audioSource.isPlaying)
+                audioSource.Stop();
+
+            if (!_isVisible)
+                containerCanvasGroup.alpha = 0;
+            textScrollView.sizeDelta = Vector2.zero;
         }
 
         private void Update()
         {
-            if (audioSource.isPlaying)
-                seekSlider.SetValueWithoutNotify(audioSource.time / audioSource.clip.length);
+            if (_isVisible && audioSource.isPlaying)
+                UpdatePlaybackSliderAndText();
         }
 
-        public void ShowPlayerAndResume()
+        private void UpdatePlaybackSliderAndText()
         {
-            container.SetActive(true);
+            seekSlider.SetValueWithoutNotify(audioSource.time / audioSource.clip.length);
+            
+            int minutes = Mathf.FloorToInt(audioSource.time / 60);
+            int seconds = Mathf.FloorToInt(audioSource.time % 60);
+            playbackTimeText.text = $"{minutes:00}:{seconds:00}";
+        }
 
-            if (autoResume && _isPlaying)
+        public void ToggleVisibility()
+        {
+            Debug.Log("Toggle visibility");
+            if (_isVisible)
+                HidePlayer();
+            else
+                ShowPlayer();
+
+            _isVisible = !_isVisible;
+        }
+
+        private async void ShowPlayer()
+        {
+            Debug.Log("Show player");
+            _showContainerAnimation.PlayForward();
+            await _showContainerAnimation.AsyncWaitForCompletion();
+
+            Play();
+        }
+
+        private void HidePlayer()
+        {
+            Debug.Log("Hide player");
+            if (audioSource.isPlaying)
+                audioSource.Stop();
+            
+            _showContainerAnimation.PlayBackwards();
+        }
+
+        public void PlayPauseRestart()
+        {
+            Debug.Log("PlayPauseRestart");
+            if (audioSource.isPlaying)
+                Pause();
+            else
                 Play();
         }
 
-        private void StopAndHidePlayer()
+        private void Play()
         {
-            if (audioSource.isPlaying)
-                audioSource.Stop();
-
-            container.SetActive(false);
-        }
-
-        public void Play()
-        {
+            Debug.Log("Play");
             playButtonImage.sprite = pauseIcon;
             if (Mathf.Approximately(audioSource.time, audioSource.clip.length))
                 _playbackTime = 0;
@@ -74,21 +124,34 @@ namespace ArtEye
             audioSource.Play();
         }
 
-        public void Pause()
+        private void Pause()
         {
+            Debug.Log("Pause");
             _playbackTime = audioSource.time;
             audioSource.Pause();
         }
 
         public void ToggleSubtitles()
         {
+            Debug.Log("Toggle subtitles");
             _showSubtitles = !_showSubtitles;
-            textScrollView.SetActive(_showSubtitles);
+            if (_showSubtitles)
+                _showSubtitlesAnimation.PlayForward();
+            else
+                _showSubtitlesAnimation.PlayBackwards();
         }
 
         public void Seek(float playbackPercent)
         {
+            Debug.Log("Seek");
             audioSource.time = audioSource.clip.length / playbackPercent;
+            _playbackTime = audioSource.time;
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            Debug.Log("OnTriggerExit");
+            HidePlayer();
         }
     }
 }
