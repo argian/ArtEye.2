@@ -10,10 +10,11 @@ namespace ArtEye
         [SerializeField] private float spinningSpeed = 45f;
         [SerializeField] private float hoverSpeedMultiplier = 8f;
 
+        private Sequence _clickAnimation;
         private float _targetSpinningSpeed;
         private float _currentSpinningSpeed;
-        private Sequence _clickAnimation;
-
+        private int _hovered;
+        
         protected override void Awake()
         {
             base.Awake();
@@ -29,17 +30,24 @@ namespace ArtEye
         {
             Spin();
         }
-
+        
         protected override void OnHoverEntered(HoverEnterEventArgs args)
         {
             base.OnHoverEntered(args);
+            _hovered++;
+            if (_hovered > 1)
+                return;
             _targetSpinningSpeed *= hoverSpeedMultiplier;
         }
 
         protected override void OnHoverExited(HoverExitEventArgs args)
         {
             base.OnHoverExited(args);
-            _targetSpinningSpeed = spinningSpeed;
+            _hovered--;
+            if (_hovered == 0)
+                _targetSpinningSpeed = spinningSpeed;
+            if (_hovered < 0)
+                _hovered = 0;
         }
 
         protected override void OnSelectEntered(SelectEnterEventArgs args)

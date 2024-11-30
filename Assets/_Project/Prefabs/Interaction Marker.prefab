@@ -284,6 +284,7 @@ MonoBehaviour:
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
   spinningSpeed: 45
+  hoverSpeedMultiplier: 8
 --- !u!54 &9096120481210136063
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -321,15 +322,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c8b5fad793684e74dab4a52f87071314, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8b5fad793684e74dab4a52f87071314, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8b5fad793684e74dab4a52f87071314, type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c8b5fad793684e74dab4a52f87071314, type: 3}
       propertyPath: m_LocalPosition.x
