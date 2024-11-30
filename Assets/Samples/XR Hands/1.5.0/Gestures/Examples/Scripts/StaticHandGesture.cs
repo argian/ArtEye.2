@@ -1,4 +1,5 @@
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.XR.Hands.Gestures;
 
@@ -135,14 +136,23 @@ namespace UnityEngine.XR.Hands.Samples.GestureSample
         void OnEnable()
         {
             m_HandTrackingEvents.jointsUpdated.AddListener(OnJointsUpdated);
+            SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
 
             m_HandShape = m_HandShapeOrPose as XRHandShape;
             m_HandPose = m_HandShapeOrPose as XRHandPose;
             if (m_HandPose != null && m_HandPose.relativeOrientation != null)
                 m_HandPose.relativeOrientation.targetTransform = m_TargetTransform;
         }
+        void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
+        {
+            m_TimeOfLastConditionCheck = 0;
+        }
 
-        void OnDisable() => m_HandTrackingEvents.jointsUpdated.RemoveListener(OnJointsUpdated);
+        void OnDisable()
+        {
+            m_HandTrackingEvents.jointsUpdated.RemoveListener(OnJointsUpdated);
+            SceneManager.activeSceneChanged -= SceneManager_activeSceneChanged;
+        }
 
         void OnJointsUpdated(XRHandJointsUpdatedEventArgs eventArgs)
         {
