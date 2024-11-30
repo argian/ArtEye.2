@@ -8,7 +8,9 @@ namespace ArtEye
     public class InteractionMarker : XRSimpleInteractable
     {
         [SerializeField] private float spinningSpeed = 45f;
+        [SerializeField] private float hoverSpeedMultiplier = 8f;
 
+        private float _targetSpinningSpeed;
         private float _currentSpinningSpeed;
         private Sequence _clickAnimation;
 
@@ -20,6 +22,7 @@ namespace ArtEye
                 .Append(transform.DOScale(new Vector3(1f, 1f, 1f), 0.3f).SetEase(Ease.InOutSine))
                 .Pause()
                 .SetAutoKill(false);
+            _targetSpinningSpeed = spinningSpeed;
         }
 
         private void Update()
@@ -30,13 +33,13 @@ namespace ArtEye
         protected override void OnHoverEntered(HoverEnterEventArgs args)
         {
             base.OnHoverEntered(args);
-            spinningSpeed *= 8f;
+            _targetSpinningSpeed *= hoverSpeedMultiplier;
         }
 
         protected override void OnHoverExited(HoverExitEventArgs args)
         {
             base.OnHoverExited(args);
-            spinningSpeed /= 8f;
+            _targetSpinningSpeed = spinningSpeed;
         }
 
         protected override void OnSelectEntered(SelectEnterEventArgs args)
@@ -47,8 +50,8 @@ namespace ArtEye
         
         private void Spin()
         {
-            if (!Mathf.Approximately(_currentSpinningSpeed, spinningSpeed))
-                _currentSpinningSpeed = Mathf.Lerp(_currentSpinningSpeed, spinningSpeed, .1f);
+            if (!Mathf.Approximately(_currentSpinningSpeed, _targetSpinningSpeed))
+                _currentSpinningSpeed = Mathf.Lerp(_currentSpinningSpeed, _targetSpinningSpeed, .1f);
             
             transform.Rotate(Vector3.up, _currentSpinningSpeed * Time.deltaTime);
         }
