@@ -15,6 +15,10 @@ namespace ArtEye.Warhol
             if (!IsOn)
                 return;
 
+            CampbellCan can = other.attachedRigidbody.GetComponent<CampbellCan>();
+            if (can && can.PickedUp)
+                return;
+
             Vector3 otherPosition = other.bounds.center;
         
             Vector3 movement = otherPosition + transform.forward;
