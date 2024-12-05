@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 namespace ArtEye
 {
@@ -7,130 +9,146 @@ namespace ArtEye
     [RequireComponent(typeof(Collider))]
     public class NarrativePlayer : MonoBehaviour
     {
-        // These shouldn't be public but it is what it is...
-        public GameObject container;
+        // container
+        [SerializeField] private CanvasGroup containerCanvasGroup;
+        
+        [SerializeField] private AudioSource audioSource;
+        [SerializeField] private TMP_Text textComponent;
+        
+        [SerializeField] private RectTransform textScrollView;
 
-        public AudioSource audioSource;
+        [SerializeField] private TMP_Text playbackTimeText;
+        [SerializeField] private Slider seekSlider;
 
-        public GameObject textCanvas;
+        // play button
+        [SerializeField] private Image playButtonImage;
+        [SerializeField] private Sprite playIcon;
+        [SerializeField] private Sprite pauseIcon;
+        [SerializeField] private Sprite replayIcon;
 
-        public TMP_Text textComponent;
+        private Tweener _showContainerAnimation;
+        private Tweener _showSubtitlesAnimation;
 
-        public GameObject playButton;
-
-        public GameObject pauseButton;
-
-        [Space] public bool hideText = true;
-
-        public bool autoResume = false;
-
-        bool _isPlaying = false;
-
-        float _playbackTime = 0;
-
+        private bool _isVisible;
+        private float _playbackTime;
+        private bool _showSubtitles;
 
 #if UNITY_EDITOR
         [Space, TextArea(10, 25)] public string text;
-
         [Space] public AudioClip clip;
 #endif
 
-        void Start()
+        private void Awake()
         {
-            StopAndHidePlayer();
-
-            if (hideText)
-                HideText();
+            _showContainerAnimation = containerCanvasGroup.DOFade(1f, .3f)
+                .SetEase(Ease.InOutSine)
+                .Pause()
+                .SetAutoKill(false);
+            
+            _showSubtitlesAnimation = textScrollView.DOSizeDelta(new Vector3(0f, 300f, 0f), 1f)
+                .SetEase(Ease.OutSine)
+                .Pause()
+                .SetAutoKill(false);
         }
 
-        // FIXME old udon code
-        /*
-        public override void OnPlayerTriggerEnter(VRCPlayerApi player)
+        private void Start()
         {
-            base.OnPlayerTriggerEnter(player);
+            if (audioSource.isPlaying)
+                audioSource.Stop();
 
-            if (!player.isLocal)
-                return;
-
-            ShowPlayerAndResume();
+            if (!_isVisible)
+                containerCanvasGroup.alpha = 0;
+            textScrollView.sizeDelta = Vector2.zero;
         }
-        */
 
-        // FIXME old udon code
-        /*
-        public override void OnPlayerTriggerExit(VRCPlayerApi player)
+        private void Update()
         {
-            base.OnPlayerTriggerExit(player);
+            if (_isVisible && audioSource.isPlaying)
+                UpdatePlaybackSliderAndText();
 
-            if (!player.isLocal)
-                return;
-
-            StopAndHidePlayer();
+            if (Mathf.Approximately(audioSource.time, audioSource.clip.length))
+                playButtonImage.sprite = replayIcon;
         }
-        */
-
-        void ShowPlayerAndResume()
+        
+        private void OnTriggerExit(Collider other)
         {
-            container.SetActive(true);
-
-            if (autoResume && _isPlaying)
-                Play();
+            HidePlayer();
+        }
+        
+        public void ToggleVisibility()
+        {
+            if (_isVisible)
+                HidePlayer();
             else
-            {
-                if (playButton)
-                    playButton.SetActive(true);
-                if (pauseButton)
-                    pauseButton.SetActive(false);
-            }
+                ShowPlayer();
+
+            _isVisible = !_isVisible;
         }
 
-        void StopAndHidePlayer()
+        public void TogglePlay()
         {
-            if (_isPlaying)
-            {
-                Stop();
-
-                if (_playbackTime < Mathf.Epsilon) // Finished playing
-                    _isPlaying = false;
-            }
-
-            container.SetActive(false);
+            if (audioSource.isPlaying)
+                Pause();
+            else
+                PlayOrRestart();
         }
 
-        public void Play()
+        public void ToggleSubtitles()
         {
+            _showSubtitles = !_showSubtitles;
+            if (_showSubtitles)
+                _showSubtitlesAnimation.PlayForward();
+            else
+                _showSubtitlesAnimation.PlayBackwards();
+        }
+
+        private void UpdatePlaybackSliderAndText()
+        {
+            seekSlider.SetValueWithoutNotify(audioSource.time / audioSource.clip.length);
+            
+            int minutes = Mathf.FloorToInt(audioSource.time / 60);
+            int seconds = Mathf.FloorToInt(audioSource.time % 60);
+            playbackTimeText.text = $"{minutes:00}:{seconds:00}";
+        }
+
+        private async void ShowPlayer()
+        {
+            _showContainerAnimation.PlayForward();
+            await _showContainerAnimation.AsyncWaitForCompletion();
+
+            PlayOrRestart();
+        }
+
+        private void HidePlayer()
+        {
+            if (audioSource.isPlaying)
+                audioSource.Stop();
+            
+            _showContainerAnimation.PlayBackwards();
+        }
+
+        private void PlayOrRestart()
+        {
+            playButtonImage.sprite = pauseIcon;
+            if (audioSource.time == 0)
+                _playbackTime = 0;
             audioSource.time = _playbackTime;
             audioSource.Play();
-
-            _isPlaying = true;
         }
 
-        public void Replay()
-        {
-            _playbackTime = 0;
-            Play();
-        }
-
-        public void Pause()
-        {
-            Stop();
-            _isPlaying = false;
-        }
-
-        void Stop()
+        private void Pause()
         {
             _playbackTime = audioSource.time;
-            audioSource.Stop();
+            playButtonImage.sprite = playIcon;
+            audioSource.Pause();
         }
 
-        public void ShowText()
+        public void Seek(float playbackPercent)
         {
-            textCanvas.SetActive(true);
-        }
-
-        public void HideText()
-        {
-            textCanvas.SetActive(false);
+            audioSource.time = audioSource.clip.length * playbackPercent;
+            _playbackTime = audioSource.time;
+            
+            UpdatePlaybackSliderAndText();
         }
     }
 }
