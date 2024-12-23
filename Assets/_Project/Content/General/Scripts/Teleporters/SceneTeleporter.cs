@@ -6,7 +6,7 @@ namespace ArtEye.Teleportation
     {
         [SerializeField] private SceneLink sceneToLoad;
 
-        protected override void Teleport(GameObject playerObject)
+        protected override void OnTeleport(GameObject playerObject)
         {
             if (!sceneToLoad)
             {

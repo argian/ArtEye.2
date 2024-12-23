@@ -76,7 +76,19 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6762135025773121937}
+        m_TargetAssemblyTypeName: ArtEye.Teleportation.TeleporterBase, Assembly-CSharp
+        m_MethodName: Teleport
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -204,6 +216,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35aa6c20426732d4ea62b97bd698103d, type: 3}
+--- !u!114 &6762135025773121937 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4393278981435283730, guid: 35aa6c20426732d4ea62b97bd698103d, type: 3}
+  m_PrefabInstance: {fileID: 7003064497385293955}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584d34fb81ac73d49a91e5207f93354e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6855471098001499264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4471059212278623235, guid: 35aa6c20426732d4ea62b97bd698103d, type: 3}
