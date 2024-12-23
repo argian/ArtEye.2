@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,15 +12,23 @@ namespace ArtEye
         [Space]
         [SerializeField] private Vector3 offset = new(0, .2f, 1.25f);
 
-        Transform hmdTransform;
+        [Space]
+        [SerializeField] private TMP_Text header;
+        [SerializeField] private GameObject backButton;
+
+        [SerializeField] private MenuView currentView;
+        private MenuView _previousView;
+
+        Transform _hmdTransform;
 
         private void Awake()
         {
             menuActionRef.action.performed += TriggerMenu;
             menuActionTrigger.Performed += TriggerMenu;
 
-            hmdTransform = Camera.main.transform;
+            _hmdTransform = Camera.main.transform;
 
+            backButton.SetActive(false);
             gameObject.SetActive(false);
         }
 
@@ -27,7 +36,7 @@ namespace ArtEye
 
         private void Reposition()
         {
-            Vector3 newPosition = hmdTransform.position + (hmdTransform.forward * offset.z);
+            Vector3 newPosition = _hmdTransform.position + (_hmdTransform.forward * offset.z);
             newPosition.x += offset.x;
             newPosition.y *= .5f;
             newPosition.y += offset.y;
@@ -38,5 +47,33 @@ namespace ArtEye
         private void TriggerMenu(InputAction.CallbackContext ctx) => TriggerMenu();
 
         private void TriggerMenu() => gameObject.SetActive(!gameObject.activeSelf);
+
+        public void ChangeView(MenuView view)
+        {
+            _previousView = currentView;
+            
+            currentView.gameObject.SetActive(false);
+            currentView = view;
+            currentView.gameObject.SetActive(true);
+
+            header.SetText(currentView.Header);
+
+            backButton.SetActive(true);
+        }
+
+        public void GoBack()
+        {
+            if (!_previousView)
+                return;
+
+            currentView.gameObject.SetActive(false);
+            currentView = _previousView;
+            currentView.gameObject.SetActive(true);
+
+            header.SetText(currentView.Header);
+
+            backButton.SetActive(false);
+            _previousView = null;
+        }
     }
 }
