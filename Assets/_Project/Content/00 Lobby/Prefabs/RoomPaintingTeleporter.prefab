@@ -230,7 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   window: {fileID: 540074952406821489}
   canvasGroup: {fileID: 216197063102567477}
-  isOpen: 1
+  isOpen: 0
 --- !u!1 &1927573861248512492
 GameObject:
   m_ObjectHideFlags: 0
