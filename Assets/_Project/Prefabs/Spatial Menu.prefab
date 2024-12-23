@@ -1906,7 +1906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuActionRef: {fileID: -5941235936514067122, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   menuActionTrigger: {fileID: 11400000, guid: fe89def61d6f9b348be8d4db8fc8c672, type: 2}
-  offset: {x: 0, y: 0.2, z: 1.25}
+  offset: {x: 0, y: -0.5, z: 1.25}
   header: {fileID: 6792005656525114126}
   backButton: {fileID: 1252532965861898101}
   currentView: {fileID: 8856354216593716283}

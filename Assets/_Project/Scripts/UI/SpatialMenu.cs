@@ -10,7 +10,7 @@ namespace ArtEye
         [SerializeField] private ActionTriggerSO menuActionTrigger;
 
         [Space]
-        [SerializeField] private Vector3 offset = new(0, .2f, 1.25f);
+        [SerializeField] private Vector3 offset = new(0, 0, 1.25f);
 
         [Space]
         [SerializeField] private TMP_Text header;
@@ -40,7 +40,6 @@ namespace ArtEye
         {
             Vector3 newPosition = _hmdTransform.position + (_hmdTransform.forward * offset.z);
             newPosition.x += offset.x;
-            newPosition.y *= .5f;
             newPosition.y += offset.y;
 
             transform.position = newPosition;
