@@ -1862,7 +1862,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7955879340470176313}
   - component: {fileID: 5989938930836674879}
-  - component: {fileID: -1969488265842341713}
   - component: {fileID: 9163333044079182022}
   - component: {fileID: 216634224535713846}
   - component: {fileID: 4986183505360512362}
@@ -1911,18 +1910,6 @@ MonoBehaviour:
   header: {fileID: 6792005656525114126}
   backButton: {fileID: 1252532965861898101}
   currentView: {fileID: 8856354216593716283}
---- !u!114 &-1969488265842341713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8215740806873459211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b0a99daafc3aa5458a169987a4fc675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!137 &9163333044079182022
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

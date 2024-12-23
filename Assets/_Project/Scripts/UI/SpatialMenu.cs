@@ -23,6 +23,8 @@ namespace ArtEye
 
         private void Awake()
         {
+            DontDestroyOnLoad(gameObject);
+
             menuActionRef.action.performed += TriggerMenu;
             menuActionTrigger.Performed += TriggerMenu;
 
