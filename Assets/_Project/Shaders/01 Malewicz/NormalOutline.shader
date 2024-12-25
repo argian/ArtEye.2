@@ -2,7 +2,7 @@
 {
     Properties
     {
-        _LineColor("LineColor", Color) = (0, 0, 0, 0)
+        _LineColor("LineColor", Color) = (1, 1, 1, 1)
         _LineWidth("LineWidth", int) = 1
         _NormalsThreshold("NormalsTreshold", Range(0, 1)) = 1
         _DepthThreshold("DepthTreshold", Range(0, 1)) = 1
