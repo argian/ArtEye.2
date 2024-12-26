@@ -104,10 +104,15 @@ Shader "Hidden/FinalOutline"
             float2 rounduv = float2(round(uv.x * _ScaledScreenParams.x) / _ScaledScreenParams.x, round(uv.y * _ScaledScreenParams.y) / _ScaledScreenParams.y);
             float2 move = float2((1 / _ScaledScreenParams.x), (1 / _ScaledScreenParams.y));
 
-            //return float4(normal.x, normal.y, normal.z, 1);
+            //NORMALS TESTING
+            //float2 uv2 = ClampAndScaleUVForBilinear(UnityStereoTransformScreenSpaceTex(uv), _CameraDepthTexture_TexelSize.xy);
+            //float3 notDepth = SAMPLE_TEXTURE2D_X(_CameraDepthTexture, sampler_PointClamp, uv2);
+            
+            
+            return float4(normal.x, normal.y, normal.z, 1);
 
-            //float3 sceneCol = SampleSceneColor(uv);
-            //return float4(sceneCol, 1);
+            float3 sceneCol = SampleSceneColor(uv);
+            //return float4(sceneCol * depth, 1);
 
             //checking if in desired area
             float3 worldPos = ComputeWorldSpacePosition(uv, rawDepth, UNITY_MATRIX_I_VP);
