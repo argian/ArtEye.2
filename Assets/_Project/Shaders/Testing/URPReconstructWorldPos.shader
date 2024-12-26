@@ -103,6 +103,7 @@ Shader "Example/URPReconstructWorldPos"
                     return half4(0,0,0,1);
             #endif
 
+
             return color;
         }
         ENDHLSL

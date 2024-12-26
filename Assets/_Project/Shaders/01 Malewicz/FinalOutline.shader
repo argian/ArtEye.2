@@ -3,7 +3,9 @@ Shader "Hidden/FinalOutline"
     Properties
     {
         _LineColor("LineColor", Color) = (1, 1, 1, 1)
-        _LineWidth("LineWidth", int) = 1
+        _AreaSize("AreaSize", float) = 1
+        _SamplingSize("SamplingSize", int) = 1
+        _LineWidth("LineWidth", float) = 1 //in world units
         _NormalsThreshold("NormalsTreshold", Range(0, 1)) = 1
         _DepthThreshold("DepthTreshold", Range(0, 1)) = 1
     }
@@ -19,6 +21,7 @@ Shader "Hidden/FinalOutline"
 
         Ztest Always
         Zwrite Off
+        Cull Front
 
         Pass
         {
@@ -64,7 +67,9 @@ Shader "Hidden/FinalOutline"
 
         vector _LineColor;
 
-        int _LineWidth;
+        float _AreaSize;
+        int _SamplingSize;
+        float _LineWidth;
         float _NormalsThreshold;
         float _DepthThreshold;
 
@@ -79,14 +84,14 @@ Shader "Hidden/FinalOutline"
 
             // Sample the depth from the Camera depth texture.
             #if UNITY_REVERSED_Z
-                real depth = SampleSceneDepth(uv);
+                real rawDepth = SampleSceneDepth(uv);
             #else
                 // Adjust Z to match NDC for OpenGL ([-1, 1])
-                real depth = lerp(UNITY_NEAR_CLIP_VALUE, 1, SampleSceneDepth(uv));
+                real rawDepth = lerp(UNITY_NEAR_CLIP_VALUE, 1, SampleSceneDepth(uv));
             #endif
 
             //simplify depth
-            depth = LinearEyeDepth(depth, _ZBufferParams);
+            float depth = LinearEyeDepth(rawDepth, _ZBufferParams);
             //depth debugging
             //return float4(depth, depth, depth, 1);
 
@@ -99,31 +104,49 @@ Shader "Hidden/FinalOutline"
             float2 rounduv = float2(round(uv.x * _ScaledScreenParams.x) / _ScaledScreenParams.x, round(uv.y * _ScaledScreenParams.y) / _ScaledScreenParams.y);
             float2 move = float2((1 / _ScaledScreenParams.x), (1 / _ScaledScreenParams.y));
 
-            //return float4(normal.x, normal.x, normal.x, 1);
+            //return float4(normal.x, normal.y, normal.z, 1);
 
             //float3 sceneCol = SampleSceneColor(uv);
             //return float4(sceneCol, 1);
 
+            //checking if in desired area
+            float3 worldPos = ComputeWorldSpacePosition(uv, rawDepth, UNITY_MATRIX_I_VP);
+            float4 objectOrigin = mul(unity_ObjectToWorld, float4(0.0, 0.0, 0.0, 1.0));
+            float orgDist = length(worldPos - objectOrigin.xyz);
+            //*
+            if (length(worldPos - objectOrigin.xyz) > _AreaSize)
+            {
+                clip(-1);
+            }
+            //*/
+
             //main loop
-            for (int j = 1; j < _LineWidth; j++)
+            for (int j = 1; j < _SamplingSize; j++)
             {
                 for (int i = 3; i >= 1; i--)
                 {
                     float2 nghuv = SampleNeighbour(i, rounduv, move * j);
 
                     #if UNITY_REVERSED_Z
-                        real nghDepth = SampleSceneDepth(nghuv);
+                        real nghRawDepth = SampleSceneDepth(nghuv);
                     #else
                         // Adjust Z to match NDC for OpenGL ([-1, 1])
-                        real nghDepth = lerp(UNITY_NEAR_CLIP_VALUE, 1, SampleSceneDepth(nghuv));
+                        real nghRawDepth = lerp(UNITY_NEAR_CLIP_VALUE, 1, SampleSceneDepth(nghuv));
                     #endif
                     //simplify depth
-                    nghDepth = LinearEyeDepth(nghDepth, _ZBufferParams);
+                    float nghDepth = LinearEyeDepth(nghRawDepth, _ZBufferParams);
                     //depth:
                     half depthDiff = abs(depth - nghDepth);
                     if (depthDiff > _DepthThreshold)
                     {
-                        return _LineColor;
+                        //make lines scale with world space not screen space
+                        float3 nghWorldPos = ComputeWorldSpacePosition(nghuv, rawDepth, UNITY_MATRIX_I_VP); //yes, we use original depth to check distance as if points were perpendicular, otherwise we could not compare real distane when depth is much different
+                        float worldDist = length(worldPos - nghWorldPos);
+                        if (worldDist < _LineWidth)
+                        {
+                            return _LineColor * (worldDist / _LineWidth);
+                        }
+
                     }
                 }
             }
