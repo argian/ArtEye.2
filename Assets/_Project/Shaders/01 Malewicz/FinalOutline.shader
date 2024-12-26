@@ -113,12 +113,17 @@ Shader "Hidden/FinalOutline"
             float3 worldPos = ComputeWorldSpacePosition(uv, rawDepth, UNITY_MATRIX_I_VP);
             float4 objectOrigin = mul(unity_ObjectToWorld, float4(0.0, 0.0, 0.0, 1.0));
             float orgDist = length(worldPos - objectOrigin.xyz);
-            //*
-            if (length(worldPos - objectOrigin.xyz) > _AreaSize)
+
+            if (orgDist > _AreaSize)
             {
                 clip(-1);
             }
-            //*/
+            else if (abs(orgDist - _AreaSize) < _LineWidth) //make lines at edges of area
+            {
+                //return _LineColor * (abs(orgDist - _AreaSize) / _LineWidth);
+                col = _LineColor * (abs(orgDist - _AreaSize) / _LineWidth);
+            }
+
 
             //main loop
             for (int j = 1; j < _SamplingSize; j++)
