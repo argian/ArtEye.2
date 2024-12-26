@@ -41,6 +41,7 @@ Shader "Hidden/FinalOutline"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareOpaqueTexture.hlsl"
 
             #include "Assets/_Project/Shaders/General/UsefulCalculations.cginc"
+            #include "Assets/_Project/Shaders/General/ShapesCalculations.cginc"
 
             struct Attributes
             {

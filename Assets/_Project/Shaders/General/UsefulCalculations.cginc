@@ -1,4 +1,5 @@
-
+#ifndef USEFUL_CALCULATIONS_INCLUDED
+#define USEFUL_CALCULATIONS_INCLUDED
 /*
 float RoundScale(float val, float scale)
 {
@@ -319,3 +320,5 @@ float GradientNoise(in float3 p)
 			lerp(dot(hash(i + float3(0.0, 1.0, 1.0)), f - float3(0.0, 1.0, 1.0)),
 				dot(hash(i + float3(1.0, 1.0, 1.0)), f - float3(1.0, 1.0, 1.0)), u.x), u.y), u.z);
 }
+
+#endif
