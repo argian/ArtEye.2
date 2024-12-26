@@ -102,16 +102,11 @@ Shader "Hidden/FinalOutline"
 
             //fraction take:
             float2 rounduv = float2(round(uv.x * _ScaledScreenParams.x) / _ScaledScreenParams.x, round(uv.y * _ScaledScreenParams.y) / _ScaledScreenParams.y);
-            float2 move = float2((1 / _ScaledScreenParams.x), (1 / _ScaledScreenParams.y));
+            float2 move = float2((1 / _ScaledScreenParams.x), (1 / _ScaledScreenParams.y));            
 
-            //NORMALS TESTING
-            //float2 uv2 = ClampAndScaleUVForBilinear(UnityStereoTransformScreenSpaceTex(uv), _CameraDepthTexture_TexelSize.xy);
-            //float3 notDepth = SAMPLE_TEXTURE2D_X(_CameraDepthTexture, sampler_PointClamp, uv2);
-            
-            
-            return float4(normal.x, normal.y, normal.z, 1);
 
-            float3 sceneCol = SampleSceneColor(uv);
+            //alternative to clip, display color buffer
+            //float3 sceneCol = SampleSceneColor(uv);
             //return float4(sceneCol * depth, 1);
 
             //checking if in desired area
@@ -125,15 +120,14 @@ Shader "Hidden/FinalOutline"
             }
             else if (abs(orgDist - _AreaSize) < _LineWidth) //make lines at edges of area
             {
-                //return _LineColor * (abs(orgDist - _AreaSize) / _LineWidth);
-                col = _LineColor * (abs(orgDist - _AreaSize) / _LineWidth);
+                col = _LineColor * (1 - (abs(orgDist - _AreaSize) / _LineWidth));
             }
 
 
             //main loop
             for (int j = 1; j < _SamplingSize; j++)
             {
-                for (int i = 3; i >= 1; i--)
+                for (int i = 8; i >= 1; i--)
                 {
                     float2 nghuv = SampleNeighbour(i, rounduv, move * j);
 
@@ -145,16 +139,19 @@ Shader "Hidden/FinalOutline"
                     #endif
                     //simplify depth
                     float nghDepth = LinearEyeDepth(nghRawDepth, _ZBufferParams);
-                    //depth:
                     half depthDiff = abs(depth - nghDepth);
-                    if (depthDiff > _DepthThreshold)
+
+                    float3 nghNormal = SampleSceneNormals(nghuv);
+                    float normalDiff = acos(dot(normal, nghNormal) / (length(normal) * length(nghNormal)));
+
+                    if (depthDiff > _DepthThreshold || normalDiff > _NormalsThreshold)
                     {
                         //make lines scale with world space not screen space
                         float3 nghWorldPos = ComputeWorldSpacePosition(nghuv, rawDepth, UNITY_MATRIX_I_VP); //yes, we use original depth to check distance as if points were perpendicular, otherwise we could not compare real distane when depth is much different
                         float worldDist = length(worldPos - nghWorldPos);
                         if (worldDist < _LineWidth)
                         {
-                            return _LineColor * (worldDist / _LineWidth);
+                            return _LineColor * (1 - (worldDist / _LineWidth));
                         }
 
                     }
