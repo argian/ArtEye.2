@@ -3,7 +3,8 @@ Shader "Hidden/FinalOutline"
     Properties
     {
         _LineColor("LineColor", Color) = (1, 1, 1, 1)
-        _AreaSize("AreaSize", float) = 1
+        _AreaShape("AreaShape", int) = 0
+        _AreaSize("AreaSize", vector) = (1, 1, 1, 0)
         _SamplingSize("SamplingSize", int) = 1
         _LineWidth("LineWidth", float) = 1 //in world units
         _NormalsThreshold("NormalsTreshold", Range(0, 1)) = 1
@@ -41,7 +42,8 @@ Shader "Hidden/FinalOutline"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareOpaqueTexture.hlsl"
 
             #include "Assets/_Project/Shaders/General/UsefulCalculations.cginc"
-            #include "Assets/_Project/Shaders/General/ShapesCalculations.cginc"
+            //#include "Assets/_Project/Shaders/General/ShapesCalculations.cginc"
+            #include "Assets/_Project/Shaders/General/ShapeObject.cginc"
 
             struct Attributes
             {
@@ -68,7 +70,8 @@ Shader "Hidden/FinalOutline"
 
         vector _LineColor;
 
-        float _AreaSize;
+        int _AreaShape;
+        vector _AreaSize;
         int _SamplingSize;
         float _LineWidth;
         float _NormalsThreshold;
@@ -113,17 +116,16 @@ Shader "Hidden/FinalOutline"
             //checking if in desired area
             float3 worldPos = ComputeWorldSpacePosition(uv, rawDepth, UNITY_MATRIX_I_VP);
             float4 objectOrigin = mul(unity_ObjectToWorld, float4(0.0, 0.0, 0.0, 1.0));
-            float orgDist = length(worldPos - objectOrigin.xyz);
-
-            if (orgDist > _AreaSize)
+            float sdfDist = SceneShapeObject(objectOrigin.xyz, worldPos, _AreaSize, _AreaShape);
+            if (sdfDist > 0)
             {
                 clip(-1);
             }
-            else if (abs(orgDist - _AreaSize) < _LineWidth) //make lines at edges of area
+            else if (-sdfDist < _LineWidth)//make lines at edges of area
             {
-                col = _LineColor * (1 - (abs(orgDist - _AreaSize) / _LineWidth));
+                //col = _LineColor * (1 - (abs(orgDist - _AreaSize) / _LineWidth));
+                col = _LineColor * -sdfDist / _LineWidth;
             }
-
 
             //main loop
             for (int j = 1; j < _SamplingSize; j++)

@@ -59,7 +59,7 @@ float CylinderShape(float3 p)
     return result;
 }
 
-float ConeShape(float3 p, float4 s)
+float ConeShape(float3 p)
 {
     p = abs(p);
 
@@ -72,6 +72,7 @@ float ConeShape(float3 p, float4 s)
 }
 
 //this gives you mathematically correct star
+//currently not working correctly in 3d, but works correctly in 2d
 float StarShape(float3 p)
 {
     p = abs(p);
@@ -117,9 +118,8 @@ float StarShape(float3 p)
 //-----------------------------------------------------------------------------------------
 //Advanced shapes: (aka fractals)
 
-float Mandelbulb(float3 p, float4 s)
+float Mandelbulb(float3 p)
 {
-    p /= s.xyz;
     float result = 0;
     float thres = length(p) - 1.2;
     if (thres > 0.2)
