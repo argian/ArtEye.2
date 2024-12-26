@@ -1,4 +1,4 @@
-Shader "Hidden/FinalOutline"
+Shader "ArtEye/AreaOutline"
 {
     Properties
     {
