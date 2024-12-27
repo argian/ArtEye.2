@@ -7,8 +7,10 @@ namespace ArtEye.Teleportation
         [field: SerializeField] public Transform TeleporterExit { get; set; }
         
         [SerializeField] private Teleporter linkedTeleporter;
-        
-        protected override void Teleport(GameObject playerObject) {
+
+        protected override void OnTeleport(GameObject playerObject)
+        {
+            
             if (!linkedTeleporter)
             {
                 Debug.LogError("Can't teleport! No linked teleporter set!", this);
@@ -17,7 +19,6 @@ namespace ArtEye.Teleportation
 
             playerObject.transform.position = linkedTeleporter.TeleporterExit.position;
             playerObject.transform.rotation = linkedTeleporter.TeleporterExit.rotation;
-            OnTeleportationEnd?.Invoke();
         }
     }
 }
