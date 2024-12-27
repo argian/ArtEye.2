@@ -60,14 +60,14 @@ namespace XRMultiplayer
         /// <summary>
         /// Player Name string that reads from the internal NetworkVariable for the Player Name.
         /// </summary>
-        public string playerName { get => m_PlayerName.Value.ToString(); }
-        protected readonly NetworkVariable<FixedString128Bytes> m_PlayerName = new("", NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+        public string PlayerName { get => m_PlayerName.Value.ToString(); }
+        readonly NetworkVariable<FixedString128Bytes> m_PlayerName = new("", NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
         /// <summary>
         /// Player Color that reads from the internal NetworkVariable for the Player Color.
         /// </summary>
-        public Color playerColor { get => m_PlayerColor.Value; }
-        protected readonly NetworkVariable<Color> m_PlayerColor = new(Color.white, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
+        public Color PlayerColor { get => m_PlayerColor.Value; }
+        readonly NetworkVariable<Color> m_PlayerColor = new(Color.white, NetworkVariableReadPermission.Everyone, NetworkVariableWritePermission.Owner);
 
         /// <summary>
         /// Player Name Tag.
@@ -135,6 +135,7 @@ namespace XRMultiplayer
             head.SetPositionAndRotation(m_HeadOrigin.position, m_HeadOrigin.rotation);
         }
 
+        /*
         ///<inheritdoc/>
         public override void OnDestroy()
         {
@@ -155,6 +156,7 @@ namespace XRMultiplayer
             // Unsubscribe from color updating.
             m_PlayerColor.OnValueChanged -= UpdatePlayerColor;
         }
+        */
 
         ///<inheritdoc/>
         public override void OnNetworkSpawn()
@@ -228,7 +230,7 @@ namespace XRMultiplayer
         /// <remarks>Only called on Local Player.</remarks>
         protected virtual void UpdateLocalPlayerColor(Color color)
         {
-            //m_PlayerColor.Value = XRINetworkGameManager.LocalPlayerColor.Value;
+            m_PlayerColor.Value = color;
         }
 
         /// <summary>
@@ -238,7 +240,7 @@ namespace XRMultiplayer
         /// <remarks>Only called on Local Player.</remarks>
         protected virtual void UpdateLocalPlayerName(string name)
         {
-            //m_PlayerName.Value = new FixedString128Bytes(XRINetworkGameManager.LocalPlayerName.Value);
+            m_PlayerName.Value = new FixedString128Bytes(name);
         }
 
         /// <summary>
@@ -258,6 +260,7 @@ namespace XRMultiplayer
 
             onSpawnedAll?.Invoke();
         }
+
         /// <summary>
         /// Callback anytime the local player sets <see cref="m_PlayerName"/>.
         /// </summary><remarks>Invokes the callback <see cref="onNameUpdated"/>.</remarks>

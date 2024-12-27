@@ -57,7 +57,7 @@ namespace XRMultiplayer
             m_PlayerId = player.OwnerClientId;
             m_Player = player;
 
-            UpdateName(player.playerName);
+            UpdateName(player.PlayerName);
 
             m_Player.onNameUpdated += UpdateName;
         }

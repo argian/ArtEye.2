@@ -1,4 +1,3 @@
-using Unity.Collections;
 using UnityEngine;
 using XRMultiplayer;
 
@@ -8,9 +7,17 @@ namespace ArtEye
     {
         protected override void SetupLocalPlayer()
         {
-            m_PlayerName.Value = new FixedString128Bytes(PlayerPrefs.GetString("Name"));
-            
             base.SetupLocalPlayer();
+
+            UpdateLocalPlayerName(PlayerPrefs.GetString("Name"));
+        }
+
+        public override void OnNetworkSpawn()
+        {
+            base.OnNetworkSpawn();
+
+            if (!IsOwner)
+                return;
 
             NetworkObjects.OnActiveContainerChanged += AttachToActiveContainer;
         }
@@ -18,6 +25,9 @@ namespace ArtEye
         public override void OnNetworkDespawn()
         {
             base.OnNetworkDespawn();
+
+            if (!IsOwner)
+                return;
 
             NetworkObjects.OnActiveContainerChanged -= AttachToActiveContainer;
         }
