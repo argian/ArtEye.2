@@ -73,3 +73,9 @@ crashlytics-build.properties
 
 # IDE
 .idea
+
+# Blender
+*.blend1
+
+# Other stuff
+.utmp

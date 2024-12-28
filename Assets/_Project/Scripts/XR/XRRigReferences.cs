@@ -5,6 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 namespace ArtEye
 {
+    [System.Obsolete("Not used anymore (required by obsolete NetworkPlayer)")]
     public class XRRigReferences : MonoBehaviour
     {
         public Transform Origin { get; private set; }

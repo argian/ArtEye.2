@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace ArtEye
 {
+    [System.Obsolete("Not used anymore (replaced by NetworkPlayerAnimator)")]
     public class NetworkPlayer : NetworkBehaviour
     {
         [SerializeField] private GameObject gfx;
