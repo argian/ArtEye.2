@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using Unity.XR.CoreUtils;
 
@@ -91,14 +90,6 @@ namespace ArtEye
             }
 
             // Debug.Log(markerPart * currentMarker + _lerp * markerPart * 100);
-        }
-
-        private void OnDrawGizmos()
-        {
-            if (!_localPlayer)
-                return;
-            Gizmos.color = Color.red;
-            Gizmos.DrawSphere(_localPlayer.Camera.transform.position, .2f);
         }
     }
 }
