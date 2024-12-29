@@ -12,16 +12,11 @@ namespace ArtEye
         [SerializeField] private int currentMarker;
         [SerializeField] private float activationDistance = 0.05f;
         [SerializeField] private AnimationCurve lerpCurve;
-
-        private XROrigin localPlayer;
-        //private VRCPlayerApi localPlayer;
-        //private 
-
-        [SerializeField]
-        private float YScale;
-
-        [SerializeField]
-        private float lerp;
+        
+        [SerializeField] private float yScale;
+        
+        private XROrigin _localPlayer;
+        private float _lerp;
 
         protected override void BakePropertyNames()
         {
@@ -41,14 +36,14 @@ namespace ArtEye
         protected override void FakeStart()
         {
             currentMarker = 0;
-            lerp = 0;
+            _lerp = 0;
 
-            //replace it to make sure it gets local player
-            localPlayer = GameObject.FindFirstObjectByType<XROrigin>().GetComponent<XROrigin>();
+            // replace it to make sure it gets local player
+            _localPlayer = XRRigManager.Instance.XRRig.GetComponent<XROrigin>();
 
-            MainMaterial.SetVector(PropertyIDs[0], new Vector4(0.1f, YScale, 0.1f, lerp));
-            MainMaterial.SetVector(PropertyIDs[1], new Vector4(0.1f, YScale, 0.1f, lerp));
-            MainMaterial.SetVector(PropertyIDs[2], new Vector4(0.1f, YScale, 0.1f, lerp));
+            MainMaterial.SetVector(PropertyIDs[0], new Vector4(0.1f, yScale, 0.1f, _lerp));
+            MainMaterial.SetVector(PropertyIDs[1], new Vector4(0.1f, yScale, 0.1f, _lerp));
+            MainMaterial.SetVector(PropertyIDs[2], new Vector4(0.1f, yScale, 0.1f, _lerp));
         }
 
         protected override void PassToRender()
@@ -56,46 +51,45 @@ namespace ArtEye
             if (currentMarker == markers.Length - 1)
                 return;
 
-            //camera pos and rot
-            //Vector3 playerHeadPosition = localPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Origin).position;
-            Vector3 playerHeadPosition = localPlayer.CameraInOriginSpacePos;
+            // camera pos and rot
+            Vector3 playerHeadPosition = _localPlayer.Camera.transform.position;
 
             float distanceToNextMarker = Vector3.Distance(markers[currentMarker + 1].position, playerHeadPosition);
 
-            lerp = 1f - distanceToNextMarker / Vector3.Distance(markers[currentMarker].position, markers[currentMarker + 1].position);
+            _lerp = 1f - distanceToNextMarker / Vector3.Distance(markers[currentMarker].position, markers[currentMarker + 1].position);
 
             if (distanceToNextMarker <= activationDistance)
             {
-                lerp = 1f;
+                _lerp = 1f;
                 currentMarker++;
             }
 
-            lerp = lerp < 0 ? 0 : lerp;
-            lerp = lerpCurve.Evaluate(lerp);
-            lerp = Mathf.Clamp(lerp, 0.1f, 1f);
-            MainMaterial.SetVector(PropertyIDs[currentMarker], new Vector4(lerp, YScale, lerp, lerp));
+            _lerp = _lerp < 0 ? 0 : _lerp;
+            _lerp = lerpCurve.Evaluate(_lerp);
+            _lerp = Mathf.Clamp(_lerp, 0.1f, 1f);
+            MainMaterial.SetVector(PropertyIDs[currentMarker], new Vector4(_lerp, yScale, _lerp, _lerp));
 
             for (int i = 0; i < clockAnimators.Length; i++)
             {
-                clockAnimators[i].reanimate(lerp);
+                clockAnimators[i].reanimate(_lerp);
             }
 
-            float markerPart = 1f / (float)(markers.Length - 1);
+            float markerPart = 1f / (markers.Length - 1);
             for (int i = 0; i < clockCentralizers.Length; i++)
             {
-                clockCentralizers[i].meltingThreshold = markerPart * currentMarker + lerp * markerPart;
+                clockCentralizers[i].meltingThreshold = markerPart * currentMarker + _lerp * markerPart;
             }
 
             if (currentMarker % 2 > 0)
             {
-                treeMesh.SetBlendShapeWeight(0, 100 - (markerPart * currentMarker + lerp * markerPart * 400));
+                treeMesh.SetBlendShapeWeight(0, 100 - (markerPart * currentMarker + _lerp * markerPart * 400));
             }
             else
             {
-                treeMesh.SetBlendShapeWeight(0, markerPart * currentMarker + lerp * markerPart * 400);
+                treeMesh.SetBlendShapeWeight(0, markerPart * currentMarker + _lerp * markerPart * 400);
             }
 
-            Debug.Log(markerPart * currentMarker + lerp * markerPart * 100);
+            // Debug.Log(markerPart * currentMarker + _lerp * markerPart * 100);
         }
     }
 }
