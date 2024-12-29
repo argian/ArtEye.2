@@ -15667,6 +15667,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1611815632659096971, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1833610329185853242, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -15686,6 +15690,10 @@ PrefabInstance:
     - target: {fileID: 2806518072386634821, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854939648527037918, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_text
+      value: Campbell's Soup Cans
       objectReference: {fileID: 0}
     - target: {fileID: 3716304917160889079, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
@@ -15737,15 +15745,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15753,11 +15761,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.754
+      value: -5.7540007
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15765,7 +15773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalRotation.y
@@ -15773,7 +15781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15797,6 +15805,10 @@ PrefabInstance:
         we now live in times where you can buy a painting just like you buy a random
         product in a supermarket. Art has never been so close for the taking! Maybe
         you want a piece?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: Campbell's Soup Cans
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: serializationData.Prefab
@@ -15853,6 +15865,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5647383593094130666, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -15879,6 +15899,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067081859838472116, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305624957498266199, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6456515426730794635, guid: bd716b9937445eb46898034191657175, type: 3}
@@ -15967,7 +15991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 285
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18003,6 +18027,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1611815632659096971, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1833610329185853242, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -18022,6 +18050,10 @@ PrefabInstance:
     - target: {fileID: 2806518072386634821, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854939648527037918, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_text
+      value: Campbell's Soup Cans
       objectReference: {fileID: 0}
     - target: {fileID: 3716304917160889079, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
@@ -18073,15 +18105,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.333333
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.333333
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1.333333
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18089,7 +18121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18134,6 +18166,10 @@ PrefabInstance:
         mechanism subjects everyone in the same way. You can all be influenced by
         consumptionism and materialism in everyday life and live by the rules of
         these processes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: Campbell's Soup Cans
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: serializationData.Prefab
@@ -18191,6 +18227,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_Size
+      value: 0.97943324
+      objectReference: {fileID: 0}
+    - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_Value
+      value: 1.0000038
+      objectReference: {fileID: 0}
     - target: {fileID: 5647383593094130666, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -18217,6 +18261,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067081859838472116, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305624957498266199, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6456515426730794635, guid: bd716b9937445eb46898034191657175, type: 3}
@@ -18305,7 +18353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 388.49
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19752,6 +19800,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1611815632659096971, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1833610329185853242, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -19771,6 +19823,10 @@ PrefabInstance:
     - target: {fileID: 2806518072386634821, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854939648527037918, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_text
+      value: Campbell's Soup Cans
       objectReference: {fileID: 0}
     - target: {fileID: 3716304917160889079, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
@@ -19822,15 +19878,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.333333
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.333333
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1.333333
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19838,7 +19894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19887,6 +19943,10 @@ PrefabInstance:
         the process in our company is 100% harmless and safe. The side effects are
         only the exploitation of art, lack of emotion in the creation process and
         disorder of artistic values."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: Campbell's Soup Cans
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: serializationData.Prefab
@@ -19948,6 +20008,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_Size
+      value: 0.54438025
+      objectReference: {fileID: 0}
+    - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_Value
+      value: 1.0000002
+      objectReference: {fileID: 0}
     - target: {fileID: 5647383593094130666, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -19978,6 +20046,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067081859838472116, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305624957498266199, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6456515426730794635, guid: bd716b9937445eb46898034191657175, type: 3}
@@ -20062,7 +20134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 698.96
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30921,6 +30993,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1611815632659096971, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1833610329185853242, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -30940,6 +31016,10 @@ PrefabInstance:
     - target: {fileID: 2806518072386634821, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854939648527037918, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_text
+      value: Campbell's Soup Cans
       objectReference: {fileID: 0}
     - target: {fileID: 3716304917160889079, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
@@ -30991,15 +31071,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.333333
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.333333
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1.333333
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31007,7 +31087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
@@ -31052,6 +31132,10 @@ PrefabInstance:
         at the machine! You can choose from a million patterns and inspirations.
         Create pieces in millions of copies without any effort. Be a part of mass
         production and a part of capitalistic art. Just press the button!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: Campbell's Soup Cans
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: serializationData.Prefab
@@ -31109,6 +31193,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_Size
+      value: 0.8995485
+      objectReference: {fileID: 0}
+    - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_Value
+      value: 1.0000007
+      objectReference: {fileID: 0}
     - target: {fileID: 5647383593094130666, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -31135,6 +31227,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6067081859838472116, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305624957498266199, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6456515426730794635, guid: bd716b9937445eb46898034191657175, type: 3}
@@ -31223,7 +31319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 422.99
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x

@@ -1504,24 +1504,12 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.447
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1566,6 +1554,10 @@ PrefabInstance:
         becoming a symbol of transience and the relationship between time and memory.
         I, an eccentric since childhood, was driven not so much by ambition as by
         megalomania, yet I had absolute certainty about my identity.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: The Persistence of Memory
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: serializationData.Prefab
@@ -1625,11 +1617,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
-      value: 0.89954853
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Value
-      value: 0.9999993
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5647383593094130666, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4387,6 +4379,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2854939648527037918, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_text
+      value: The Persistence of Memory
+      objectReference: {fileID: 0}
     - target: {fileID: 3716304917160889079, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -4436,24 +4432,12 @@ PrefabInstance:
       value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.356
+      value: 8.06
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4495,6 +4479,10 @@ PrefabInstance:
       propertyPath: text
       value: However, this time I'm not entirely satisfied with my work. Something
         is still not right, something is missing, something is still off.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: The Persistence of Memory
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: serializationData.Prefab
@@ -6523,6 +6511,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2854939648527037918, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_text
+      value: The Persistence of Memory
+      objectReference: {fileID: 0}
     - target: {fileID: 3716304917160889079, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -6572,28 +6564,16 @@ PrefabInstance:
       value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.214
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.38
+      value: -18.03
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6631,6 +6611,10 @@ PrefabInstance:
       propertyPath: text
       value: Finally! Perfect, it lacks nothing now, it will surely sell... hmm...
         or maybe paint another one...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: The Persistence of Memory
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: serializationData.Prefab
@@ -9660,6 +9644,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2854939648527037918, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_text
+      value: The Persistence of Memory
+      objectReference: {fileID: 0}
     - target: {fileID: 3716304917160889079, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -9709,28 +9697,16 @@ PrefabInstance:
       value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.14
+      value: 3.074
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.02
+      value: -11.954
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9768,6 +9744,10 @@ PrefabInstance:
       propertyPath: text
       value: YES! YES! This is it! Now it's perfect... hmm... No, no, no something
         is still off.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: The Persistence of Memory
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: serializationData.Prefab
@@ -10130,6 +10110,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2854939648527037918, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_text
+      value: The Persistence of Memory
+      objectReference: {fileID: 0}
     - target: {fileID: 3716304917160889079, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -10179,24 +10163,12 @@ PrefabInstance:
       value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.752
+      value: -5.23
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10242,6 +10214,10 @@ PrefabInstance:
         of the paintings. Although our team firmly believes that Dali painted other
         versions because he was not satisfied with the previous ones, the author
         painted them having profit as a motif."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: The Persistence of Memory
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: serializationData.Prefab
@@ -10302,11 +10278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
-      value: 0.89954853
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Value
-      value: 0.9999993
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5647383593094130666, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.y

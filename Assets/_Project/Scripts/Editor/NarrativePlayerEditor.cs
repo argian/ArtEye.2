@@ -9,6 +9,7 @@ namespace ArtEye.Editor
     public class NarrativePlayerEditor : UnityEditor.Editor
     {
         private NarrativePlayer _player;
+        private TMP_Text _titleTextComponent;
         private TMP_Text _playerTextComponent;
         private AudioSource _playerAudioSource;
 
@@ -19,6 +20,10 @@ namespace ArtEye.Editor
             FieldInfo audioSourceFieldInfo = typeof(NarrativePlayer).GetField("audioSource", BindingFlags.NonPublic | BindingFlags.Instance);
             if (audioSourceFieldInfo != null)
                 _playerAudioSource = (AudioSource)audioSourceFieldInfo.GetValue(_player);
+            
+            FieldInfo titleTextComponentFieldInfo = typeof(NarrativePlayer).GetField("titleTextComponent", BindingFlags.NonPublic | BindingFlags.Instance);
+            if (titleTextComponentFieldInfo != null)
+                _titleTextComponent = (TMP_Text)titleTextComponentFieldInfo.GetValue(_player);
             
             FieldInfo textComponentFieldInfo = typeof(NarrativePlayer).GetField("textComponent", BindingFlags.NonPublic | BindingFlags.Instance);
             if (textComponentFieldInfo != null)
@@ -87,8 +92,10 @@ namespace ArtEye.Editor
 
         private void AssignValues()
         {
+            _titleTextComponent.text = _player.titleText;
             _playerTextComponent.text = _player.text;
             _playerAudioSource.clip = _player.clip;
+            EditorUtility.SetDirty(_titleTextComponent);
             EditorUtility.SetDirty(_playerTextComponent);
             EditorUtility.SetDirty(_playerAudioSource);
 

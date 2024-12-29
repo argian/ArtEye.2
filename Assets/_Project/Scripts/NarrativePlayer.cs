@@ -13,6 +13,7 @@ namespace ArtEye
         [SerializeField] private CanvasGroup containerCanvasGroup;
         
         [SerializeField] private AudioSource audioSource;
+        [SerializeField] private TMP_Text titleTextComponent;
         [SerializeField] private TMP_Text textComponent;
         
         [SerializeField] private RectTransform textScrollView;
@@ -34,6 +35,7 @@ namespace ArtEye
         private bool _showSubtitles;
 
 #if UNITY_EDITOR
+        [Space] public string titleText;
         [Space, TextArea(10, 25)] public string text;
         [Space] public AudioClip clip;
 #endif

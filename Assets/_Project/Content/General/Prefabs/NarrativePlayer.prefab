@@ -2134,6 +2134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   containerCanvasGroup: {fileID: 1452512297774367791}
   audioSource: {fileID: 6540856881800942994}
+  titleTextComponent: {fileID: 2854939648527037918}
   textComponent: {fileID: 5042882148406605526}
   textScrollView: {fileID: 5132741340831425860}
   playbackTimeText: {fileID: 7210579068413749163}
@@ -2142,6 +2143,7 @@ MonoBehaviour:
   playIcon: {fileID: 21300000, guid: 490272c7e5fa30f4a88f5f77ac90ca97, type: 3}
   pauseIcon: {fileID: 21300000, guid: 5f4d26dedc364e74d880a7125d57119c, type: 3}
   replayIcon: {fileID: 21300000, guid: 477e16ce3d75d124c8bd76f95fa08730, type: 3}
+  titleText: 
   text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum
     leo euismod augue pharetra aliquam id quis dolor. Vivamus accumsan dictum nibh
     a cursus. Pellentesque consequat neque vel erat imperdiet malesuada. Nunc at
@@ -3227,7 +3229,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 225, y: -0}
-  m_SizeDelta: {x: 450, y: 2768.79}
+  m_SizeDelta: {x: 450, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &5863416115905895499
 CanvasRenderer:
@@ -3401,7 +3403,7 @@ RectTransform:
   m_GameObject: {fileID: 8335911594245915678}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0013, y: 0.0013, z: 0.0013}
+  m_LocalScale: {x: 0.0026, y: 0.0026, z: 0.0026}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2806518072386634821}
@@ -3409,7 +3411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.4}
+  m_AnchoredPosition: {x: 0, y: 1.1}
   m_SizeDelta: {x: 512, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8944954145031417039
@@ -3780,12 +3782,24 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3907149743297414227, guid: b02081960e230114b94beb02b7ac3c31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907149743297414227, guid: b02081960e230114b94beb02b7ac3c31, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907149743297414227, guid: b02081960e230114b94beb02b7ac3c31, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907149743297414227, guid: b02081960e230114b94beb02b7ac3c31, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.204
+      value: -0.408
       objectReference: {fileID: 0}
     - target: {fileID: 3907149743297414227, guid: b02081960e230114b94beb02b7ac3c31, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.522
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3907149743297414227, guid: b02081960e230114b94beb02b7ac3c31, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3818,6 +3832,10 @@ PrefabInstance:
     - target: {fileID: 3907149743297414227, guid: b02081960e230114b94beb02b7ac3c31, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3907149743297414227, guid: b02081960e230114b94beb02b7ac3c31, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
