@@ -11812,12 +11812,24 @@ PrefabInstance:
       value: NarrativePlayer (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11851,6 +11863,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
@@ -11862,6 +11878,10 @@ PrefabInstance:
         thing to do? I invite you to. Look more closely. Some paintings we don't
         understand despite looking at them for hours. Indeed, sometimes if you don't
         become part of the work, you won't be able to understand it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: Black Square
       objectReference: {fileID: 0}
     - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_text
@@ -11977,7 +11997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 388.49
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18323,12 +18343,24 @@ PrefabInstance:
       value: NarrativePlayer (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.843
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18362,6 +18394,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
@@ -18369,6 +18405,10 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: I want to show you something. Come closer. Let yourself be absorbed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: Black Square
       objectReference: {fileID: 0}
     - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_text
@@ -18480,7 +18520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 112.51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19416,12 +19456,24 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.401
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19455,6 +19507,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
@@ -19467,6 +19523,10 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: playOnce
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: Black Square
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: serializationData.Prefab
@@ -19651,7 +19711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 181.51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -21272,12 +21332,24 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.154
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21311,6 +21383,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
@@ -21327,6 +21403,10 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: playOnce
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: Black Square
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: serializationData.Prefab
@@ -21539,7 +21619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 526.48
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22018,12 +22098,24 @@ PrefabInstance:
       value: NarrativePlayer
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.73
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22057,6 +22149,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
@@ -22067,6 +22163,10 @@ PrefabInstance:
         to convey to us, but it is impossible to know without being the author. Looking
         at some paintings, one would like to become a part of it in order to understand
         it better.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: titleText
+      value: Black Square
       objectReference: {fileID: 0}
     - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_text
@@ -22181,7 +22281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 285
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x

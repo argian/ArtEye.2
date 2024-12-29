@@ -19,8 +19,8 @@ namespace ArtEye
         {
             base.Awake();
             _clickAnimation = DOTween.Sequence()
-                .Append(transform.DOScale(new Vector3(0.8f, 0.8f, 0.8f), 0.3f).SetEase(Ease.OutExpo))
-                .Append(transform.DOScale(new Vector3(1f, 1f, 1f), 0.3f).SetEase(Ease.InOutSine))
+                .Append(transform.DOScale(transform.localScale * .8f, 0.3f).SetEase(Ease.OutExpo))
+                .Append(transform.DOScale(transform.localScale, 0.3f).SetEase(Ease.InOutSine))
                 .Pause()
                 .SetAutoKill(false);
             _targetSpinningSpeed = spinningSpeed;
