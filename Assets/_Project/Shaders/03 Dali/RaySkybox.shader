@@ -51,8 +51,8 @@ Shader "ArtEye/RaySkybox"
             
             struct Attributes
             {
-
             float4 positionOS   : POSITION;
+            UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
             struct Varyings
@@ -60,6 +60,7 @@ Shader "ArtEye/RaySkybox"
                 float4 screenPos : TEXCOORD0;
                 float4 clipPos : SV_POSITION;
                 float4 ray : TEXCOORD1;
+                UNITY_VERTEX_OUTPUT_STEREO
             };
 
             float3 get_camera_pos()
@@ -77,6 +78,9 @@ Shader "ArtEye/RaySkybox"
             {
                 // Declaring the output object (OUT) with the Varyings struct.
                 Varyings OUT;
+                //set output as stereo
+                UNITY_SETUP_INSTANCE_ID(IN);
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(OUT);
                 // The TransformObjectToHClip function transforms vertex positions
                 // from object space to homogenous clip space.
                 //this magic gets screen uv

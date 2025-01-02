@@ -48,12 +48,14 @@ Shader "ArtEye/AreaOutline"
             struct Attributes
             {
             float4 positionOS   : POSITION;
+            UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
         struct Varyings
         {
             // The positions in this struct must have the SV_POSITION semantic.
             float4 positionHCS  : SV_POSITION;
+            UNITY_VERTEX_OUTPUT_STEREO
         };
 
 
@@ -61,6 +63,9 @@ Shader "ArtEye/AreaOutline"
         {
             // Declaring the output object (OUT) with the Varyings struct.
             Varyings OUT;
+            //set output as stereo
+            UNITY_SETUP_INSTANCE_ID(IN);
+            UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(OUT);
             // The TransformObjectToHClip function transforms vertex positions
             // from object space to homogenous clip space.
             OUT.positionHCS = TransformObjectToHClip(IN.positionOS.xyz);
