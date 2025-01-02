@@ -17,7 +17,7 @@ Shader "ArtEye/AreaOutline"
         // SubShader Tags define when and under which conditions a SubShader block or
         // a pass is executed.
         Tags { "RenderType" = "Opaque"
-        "Queue" = "Overlay-1"
+        "Queue" = "Geometry+50"
         "RenderPipeline" = "UniversalPipeline" }
 
         Ztest Always

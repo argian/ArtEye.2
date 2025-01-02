@@ -49,7 +49,7 @@ void localMelt_float(float4 WorldPos, float4 CenterPosition, float4 NoiseScale, 
     Result = WorldPos;
     float3 centeredPos = WorldPos - CenterPosition;
     centeredPos.z += Time * NoiseScale.w;
-    Result.y -= (GradientNoise(centeredPos / NoiseScale.xyz) + 1) * -min(0, centeredPos.y);
+    Result.y -= (GradientNoise(centeredPos / NoiseScale.xyz) + 1) / 2 * -min(0, centeredPos.y);
     
     //return Result
 }
