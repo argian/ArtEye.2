@@ -108,10 +108,10 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _CenterPos: {r: 7.28, g: -4.886667, b: -11.61, a: 0}
+    - _CenterPos: {r: 7.28, g: -3.9533334, b: -11.61, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
-    - _NoiseScale: {r: 1.13, g: 2.69, b: 1.93, a: 9.12}
+    - _NoiseScale: {r: 1.13, g: 2.69, b: 1.93, a: 2.28}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
