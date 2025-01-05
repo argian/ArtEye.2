@@ -456,7 +456,7 @@
                 {
                     "name": "Menu",
                     "type": "Button",
-                    "id": "26e22c6b-0578-42e7-9da3-923193cbcac6",
+                    "id": "fae451dd-d2a4-490b-99d7-022f324fb9ee",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -551,6 +551,17 @@
                     "action": "Position",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "7acca1d7-6403-4478-9e67-f3c735d49b23",
+                    "path": "<XRController>{LeftHand}/{MenuButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
@@ -868,17 +879,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Thumbstick",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "682bd0da-c7ae-4da1-8901-982fb3f86559",
-                    "path": "<XRController>{LeftHand}/{MenuButton}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

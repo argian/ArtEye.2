@@ -95,7 +95,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8568544637412148623}
-  - component: {fileID: 4631684680043407196}
+  - component: {fileID: -7699187500630022547}
   m_Layer: 0
   m_Name: Directional Teleport Reticle
   m_TagString: Untagged
@@ -120,7 +120,7 @@ Transform:
   - {fileID: 4559510824621843958}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4631684680043407196
+--- !u!114 &-7699187500630022547
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
