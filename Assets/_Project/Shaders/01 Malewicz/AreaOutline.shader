@@ -54,10 +54,10 @@ Shader "ArtEye/AreaOutline"
         struct Varyings
         {
             // The positions in this struct must have the SV_POSITION semantic.
-            float4 positionHCS  : SV_POSITION;
+            float4 clipPos  : SV_POSITION;
+            float4 screenPos : TEXCOORD0;
             UNITY_VERTEX_OUTPUT_STEREO
         };
-
 
         Varyings vert(Attributes IN)
         {
@@ -68,7 +68,9 @@ Shader "ArtEye/AreaOutline"
             UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(OUT);
             // The TransformObjectToHClip function transforms vertex positions
             // from object space to homogenous clip space.
-            OUT.positionHCS = TransformObjectToHClip(IN.positionOS.xyz);
+            OUT.clipPos = TransformObjectToHClip(IN.positionOS.xyz);
+            //yeah vr specialties stuff again
+            OUT.screenPos = ComputeScreenPos(OUT.clipPos);
             // Returning the output.
             return OUT;
         }
@@ -89,7 +91,7 @@ Shader "ArtEye/AreaOutline"
             // divide the pixel location by the render target resolution
             // _ScaledScreenParams.
             float4 col = float4(0, 0, 0, 1);
-            float2 uv = IN.positionHCS.xy / _ScaledScreenParams.xy;
+            float2 uv = IN.screenPos.xy / IN.screenPos.w;
 
             // Sample the depth from the Camera depth texture.
             #if UNITY_REVERSED_Z
