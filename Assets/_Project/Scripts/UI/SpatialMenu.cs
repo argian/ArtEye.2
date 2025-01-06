@@ -11,6 +11,7 @@ namespace ArtEye
 
         [Space]
         [SerializeField] private Vector3 offset = new(0, 0, 1.25f);
+        [SerializeField] private float toggleDistance = 8f;
 
         [Space]
         [SerializeField] private TMP_Text header;
@@ -34,7 +35,18 @@ namespace ArtEye
             gameObject.SetActive(false);
         }
 
-        private void OnEnable() => Reposition();
+        private void OnEnable()
+        {
+            SceneLoader.OnLoadEnd += SceneLoader_OnLoadEnd;
+            Reposition();
+        }
+
+        private void OnDisable()
+        {
+            SceneLoader.OnLoadEnd -= SceneLoader_OnLoadEnd;
+        }
+
+        private void SceneLoader_OnLoadEnd() => gameObject.SetActive(false);
 
         private void Reposition()
         {
@@ -47,7 +59,15 @@ namespace ArtEye
 
         private void TriggerMenu(InputAction.CallbackContext ctx) => TriggerMenu();
 
-        private void TriggerMenu() => gameObject.SetActive(!gameObject.activeSelf);
+        private void TriggerMenu()
+        {
+            var dist = Vector3.Distance(transform.position, _hmdTransform.position);
+
+            if (dist > toggleDistance)
+                Reposition();
+            else
+                gameObject.SetActive(!gameObject.activeSelf);
+        }
 
         public void ChangeView(MenuView view)
         {
