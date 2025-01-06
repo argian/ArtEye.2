@@ -50,6 +50,8 @@ namespace Unity.VRTemplate
             }
         }
 
+        void OnDisable() => TurnOffStuff();
+
         public void GazeHoverStart()
         {
             m_Gazing = true;
