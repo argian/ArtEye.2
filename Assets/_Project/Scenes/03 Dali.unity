@@ -1481,6 +1481,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2854939648527037918, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_text
+      value: The Persistence of Memory
+      objectReference: {fileID: 0}
     - target: {fileID: 3716304917160889079, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -1576,14 +1580,22 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: d9c4faed0c47d6a48a78c5fa41b56e72, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
-      value: '"The Persistence of Memory" is my unprecedented masterpiece where surrealism
-        intertwines with reality. Clocks melt against a backdrop of an actual landscape,
-        becoming a symbol of transience and the relationship between time and memory.
-        I, an eccentric since childhood, was driven not so much by ambition as by
-        megalomania, yet I had absolute certainty about my identity.'
+      value: "Dali called himself \u201Cthe only real surrealist\u201D although really
+        the only real surrealist was Jackson Pollock as he was the only artist, who
+        actually used Andr\xE9 Breton\u2019s idea of pure psychic automatism written
+        in \u201CSurrealist Manifesto\u201D. The conflict between Dali and Breton
+        was around Dali\u2019s political views because in 1934 he was called by Breton
+        a huge Hitler supporter. Dali draws \u201CThe Persistence of Memory\u201D
+        five years before the Spanish revolution started, two years after his film
+        with Luis Bu\xF1uel \u201CUn Chien Andalou\u201D and one year after the film
+        \u201CL\u2019Age d\u2019Or\u201D, also made with Bu\xF1uel.\n\r\n\u201CThe
+        Persistence of Memory\u201D is really a persistence of moment. Dali tries
+        to capture the moment, feeling that maybe this is the last chance to persistate
+        in memory the beautiful Port Lligat where he had spent the huge part of his
+        childhood."
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: titleText
@@ -1603,11 +1615,19 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d9c4faed0c47d6a48a78c5fa41b56e72, type: 3}
     - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_text
-      value: '"The Persistence of Memory" is my unprecedented masterpiece where surrealism
-        intertwines with reality. Clocks melt against a backdrop of an actual landscape,
-        becoming a symbol of transience and the relationship between time and memory.
-        I, an eccentric since childhood, was driven not so much by ambition as by
-        megalomania, yet I had absolute certainty about my identity.'
+      value: "Dali called himself \u201Cthe only real surrealist\u201D although really
+        the only real surrealist was Jackson Pollock as he was the only artist, who
+        actually used Andr\xE9 Breton\u2019s idea of pure psychic automatism written
+        in \u201CSurrealist Manifesto\u201D. The conflict between Dali and Breton
+        was around Dali\u2019s political views because in 1934 he was called by Breton
+        a huge Hitler supporter. Dali draws \u201CThe Persistence of Memory\u201D
+        five years before the Spanish revolution started, two years after his film
+        with Luis Bu\xF1uel \u201CUn Chien Andalou\u201D and one year after the film
+        \u201CL\u2019Age d\u2019Or\u201D, also made with Bu\xF1uel.\n\r\n\u201CThe
+        Persistence of Memory\u201D is really a persistence of moment. Dali tries
+        to capture the moment, feeling that maybe this is the last chance to persistate
+        in memory the beautiful Port Lligat where he had spent the huge part of his
+        childhood."
       objectReference: {fileID: 0}
     - target: {fileID: 5086260511080352453, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1708,11 +1728,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: d9c4faed0c47d6a48a78c5fa41b56e72, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d9c4faed0c47d6a48a78c5fa41b56e72, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 0.9844133
@@ -1775,7 +1795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 422.99
+      value: 974.94
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2605,6 +2625,18 @@ PrefabInstance:
       propertyPath: 'animObjects.Array.data[1]'
       value: 
       objectReference: {fileID: 621088101}
+    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fd98869e43f85e44b375f62e89a104d, type: 2}
     - target: {fileID: 2170234423340392753, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: MainMaterial
       value: 
@@ -2613,10 +2645,66 @@ PrefabInstance:
       propertyPath: MainMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 6fd98869e43f85e44b375f62e89a104d, type: 2}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.22766973
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.22766973
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6694524
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6694524
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 142.43501
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fd98869e43f85e44b375f62e89a104d, type: 2}
     - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: m_Name
       value: DaliClock 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fd98869e43f85e44b375f62e89a104d, type: 2}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1b228ddfe0bfdd9409037c5b8838a287, type: 2}
     - target: {fileID: 5200709454219465944, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2673,54 +2761,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 6fd98869e43f85e44b375f62e89a104d, type: 2}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 1b228ddfe0bfdd9409037c5b8838a287, type: 2}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.22766973
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.22766973
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6694524
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.6694524
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 142.43501
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_Name
-      value: DaliClock 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8963558467004822574, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -2730,30 +2770,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8963558467004822574, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 6fd98869e43f85e44b375f62e89a104d, type: 2}
-    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 6fd98869e43f85e44b375f62e89a104d, type: 2}
-    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6fd98869e43f85e44b375f62e89a104d, type: 2}
@@ -4593,11 +4609,27 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: ab8cdb15b3ae40e4db7d9f424fd4a812, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
-      value: However, this time I'm not entirely satisfied with my work. Something
-        is still not right, something is missing, something is still off.
+      value: "The clocks which are soft just like cheese, like camembert. Since the
+        World War I camembert is a big part of French culture. France was the place
+        where Hispanics like Dali and Bu\xF1uel could \u2018hide\u2019 (from Lorca\u2019s
+        point of view as we see in film \u201CLittle ashes\u201D) from coming Spanish
+        revolution. But in \u201CThe Persistence of Memory\u201D Dali shows that
+        it actually didn\u2019t work out. The time in immigration was melted or broken
+        and eaten by ants like orange clock. There were two ways of being \u2013
+        soft and calm, but feeling itself laying in the back of unknown creature
+        or in the branch of tree that could easily fall or stay strong with the risk
+        of being broken or eaten by communists or fascists. Dali himself in the different
+        periods of time represented the communist, fascist or surrealistic views.
+        By real surrealistic views or later the real surrealistic perspective he
+        considered apolitical or it\u2019s better to say out of contextual perspective
+        on the new form of art. It wasn\u2019t accepted by his friends Bu\xF1uel
+        and Federico Garc\xEDa Lorca nor by Surrealist group. Reading the prologue
+        of \u201CDiary of a Genius\u201D it feels that Dali felt offended by being
+        excluded from the group. But maybe this forced existence outside the official
+        movement contributed to Dali\u2019s popularity."
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: titleText
@@ -4617,8 +4649,24 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: ab8cdb15b3ae40e4db7d9f424fd4a812, type: 3}
     - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_text
-      value: However, this time I'm not entirely satisfied with my work. Something
-        is still not right, something is missing, something is still off.
+      value: "The clocks which are soft just like cheese, like camembert. Since the
+        World War I camembert is a big part of French culture. France was the place
+        where Hispanics like Dali and Bu\xF1uel could \u2018hide\u2019 (from Lorca\u2019s
+        point of view as we see in film \u201CLittle ashes\u201D) from coming Spanish
+        revolution. But in \u201CThe Persistence of Memory\u201D Dali shows that
+        it actually didn\u2019t work out. The time in immigration was melted or broken
+        and eaten by ants like orange clock. There were two ways of being \u2013
+        soft and calm, but feeling itself laying in the back of unknown creature
+        or in the branch of tree that could easily fall or stay strong with the risk
+        of being broken or eaten by communists or fascists. Dali himself in the different
+        periods of time represented the communist, fascist or surrealistic views.
+        By real surrealistic views or later the real surrealistic perspective he
+        considered apolitical or it\u2019s better to say out of contextual perspective
+        on the new form of art. It wasn\u2019t accepted by his friends Bu\xF1uel
+        and Federico Garc\xEDa Lorca nor by Surrealist group. Reading the prologue
+        of \u201CDiary of a Genius\u201D it feels that Dali felt offended by being
+        excluded from the group. But maybe this forced existence outside the official
+        movement contributed to Dali\u2019s popularity."
       objectReference: {fileID: 0}
     - target: {fileID: 5086260511080352453, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4715,11 +4763,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: ab8cdb15b3ae40e4db7d9f424fd4a812, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: ab8cdb15b3ae40e4db7d9f424fd4a812, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 1
@@ -4782,7 +4830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 147.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5014,6 +5062,18 @@ PrefabInstance:
       propertyPath: 'animObjects.Array.data[2]'
       value: 
       objectReference: {fileID: 3331526412613642895}
+    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 955681610c2192247bfac13cb65f9033, type: 2}
     - target: {fileID: 2170234423340392753, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: MainMaterial
       value: 
@@ -5022,10 +5082,66 @@ PrefabInstance:
       propertyPath: MainMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 955681610c2192247bfac13cb65f9033, type: 2}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.22766973
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.22766973
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6694524
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6694524
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 142.43501
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 955681610c2192247bfac13cb65f9033, type: 2}
     - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: m_Name
       value: DaliClock 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 955681610c2192247bfac13cb65f9033, type: 2}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e5aa03e409f855449a95a9fabfbc53a8, type: 2}
     - target: {fileID: 5200709454219465944, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -5082,54 +5198,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -93.212006
       objectReference: {fileID: 0}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 955681610c2192247bfac13cb65f9033, type: 2}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: e5aa03e409f855449a95a9fabfbc53a8, type: 2}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.22766973
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.22766973
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6694524
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.6694524
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 142.43501
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_Name
-      value: DaliClock 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8963558467004822574, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -5139,30 +5207,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8963558467004822574, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 955681610c2192247bfac13cb65f9033, type: 2}
-    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 955681610c2192247bfac13cb65f9033, type: 2}
-    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 955681610c2192247bfac13cb65f9033, type: 2}
@@ -5326,6 +5370,18 @@ PrefabInstance:
       propertyPath: 'animObjects.Array.data[1]'
       value: 
       objectReference: {fileID: 3714459491191558200}
+    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cd16f9be60d4e1d4599c2d707db52e58, type: 2}
     - target: {fileID: 2170234423340392753, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: MainMaterial
       value: 
@@ -5334,10 +5390,66 @@ PrefabInstance:
       propertyPath: MainMaterial
       value: 
       objectReference: {fileID: 2100000, guid: cd16f9be60d4e1d4599c2d707db52e58, type: 2}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.22766973
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.22766973
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6694524
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6694524
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 142.43501
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cd16f9be60d4e1d4599c2d707db52e58, type: 2}
     - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: m_Name
       value: DaliClock 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cd16f9be60d4e1d4599c2d707db52e58, type: 2}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 79e7fba78a8adee4da82980879e89b9f, type: 2}
     - target: {fileID: 5200709454219465944, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -5394,54 +5506,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: cd16f9be60d4e1d4599c2d707db52e58, type: 2}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 79e7fba78a8adee4da82980879e89b9f, type: 2}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.22766973
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.22766973
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6694524
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.6694524
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 142.43501
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_Name
-      value: DaliClock 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8963558467004822574, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -5451,30 +5515,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8963558467004822574, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: cd16f9be60d4e1d4599c2d707db52e58, type: 2}
-    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: cd16f9be60d4e1d4599c2d707db52e58, type: 2}
-    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: cd16f9be60d4e1d4599c2d707db52e58, type: 2}
@@ -5567,6 +5607,18 @@ PrefabInstance:
       propertyPath: 'animObjects.Array.data[1]'
       value: 
       objectReference: {fileID: 1027800452}
+    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 37e750e7816d572449946bd7dac2dda4, type: 2}
     - target: {fileID: 2170234423340392753, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: MainMaterial
       value: 
@@ -5575,10 +5627,66 @@ PrefabInstance:
       propertyPath: MainMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 37e750e7816d572449946bd7dac2dda4, type: 2}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.22766973
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.22766973
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6694524
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6694524
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 142.43501
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 37e750e7816d572449946bd7dac2dda4, type: 2}
     - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: m_Name
       value: DaliClock 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 37e750e7816d572449946bd7dac2dda4, type: 2}
+    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dc7434cb9b55c7a458fa270d5e01f242, type: 2}
     - target: {fileID: 5200709454219465944, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -5635,54 +5743,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -93.212006
       objectReference: {fileID: 0}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 37e750e7816d572449946bd7dac2dda4, type: 2}
-    - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: dc7434cb9b55c7a458fa270d5e01f242, type: 2}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.22766973
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.22766973
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.6694524
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.6694524
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319473349055467435, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 142.43501
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_Name
-      value: DaliClock 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8963558467004822574, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -5692,30 +5752,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8963558467004822574, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 37e750e7816d572449946bd7dac2dda4, type: 2}
-    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1439040503640274941, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 37e750e7816d572449946bd7dac2dda4, type: 2}
-    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4586846947632462962, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 37e750e7816d572449946bd7dac2dda4, type: 2}
@@ -6427,11 +6463,13 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: 29c301357b5cc04409218f5e59260053, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
-      value: Finally! Perfect, it lacks nothing now, it will surely sell... hmm...
-        or maybe paint another one...
+      value: "The clocks in Port Lligat are separated from the rest of the world.
+        The time becomes a personal measurement. The surrealists-clocks were Dali\u2019s
+        personal measurement. And in 1931 Dali \u2018lets\u2019 them to exist in
+        his personal heaven, in a place with a memory, in a memory itself."
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: titleText
@@ -6451,8 +6489,10 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 29c301357b5cc04409218f5e59260053, type: 3}
     - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_text
-      value: Finally! Perfect, it lacks nothing now, it will surely sell... hmm...
-        or maybe paint another one...
+      value: "The clocks in Port Lligat are separated from the rest of the world.
+        The time becomes a personal measurement. The surrealists-clocks were Dali\u2019s
+        personal measurement. And in 1931 Dali \u2018lets\u2019 them to exist in
+        his personal heaven, in a place with a memory, in a memory itself."
       objectReference: {fileID: 0}
     - target: {fileID: 5086260511080352453, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.x
@@ -6549,11 +6589,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 29c301357b5cc04409218f5e59260053, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 29c301357b5cc04409218f5e59260053, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 1
@@ -6616,7 +6656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 112.51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8648,10 +8688,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DaliClock 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4856975093390380642, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
-      propertyPath: m_Name
-      value: DaliClock 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4891031375341321654, guid: cca1e8cc1910381448979c0e1c0bc3e5, type: 3}
       propertyPath: m_ReceiveShadows
       value: 0
@@ -9548,11 +9584,21 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: c42fcbf92a8270048ac7381380a423ff, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
-      value: YES! YES! This is it! Now it's perfect... hmm... No, no, no something
-        is still off.
+      value: "Looking in the other way, clocks are actually laying ON things, not
+        the things are laying on clocks. So all the immigration (during World War
+        I and during Spanish revolution) of artists, who\u2019ll become surrealists,
+        had found the place for themselves, they\u2019ve come with their own ideas
+        and although they allowed circumstances or time to melt or corrode them (which
+        was probably inevitable), they still stayed with their own views, with their
+        own perspective and with their own narration. Dali sees surrealists as a
+        time themselves. And he sees surrealists as quite similar clocks. Later,
+        after the huge fight with them, he will write that he always was the most
+        original of them. But maybe by the time the \u201CThe Persistence of Memory\u201D
+        was created, the similarity of clocks symbolized that, like all other people,
+        surrealists in front of the war were equal.\r\n\r"
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: titleText
@@ -9572,8 +9618,18 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: c42fcbf92a8270048ac7381380a423ff, type: 3}
     - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_text
-      value: YES! YES! This is it! Now it's perfect... hmm... No, no, no something
-        is still off.
+      value: "Looking in the other way, clocks are actually laying ON things, not
+        the things are laying on clocks. So all the immigration (during World War
+        I and during Spanish revolution) of artists, who\u2019ll become surrealists,
+        had found the place for themselves, they\u2019ve come with their own ideas
+        and although they allowed circumstances or time to melt or corrode them (which
+        was probably inevitable), they still stayed with their own views, with their
+        own perspective and with their own narration. Dali sees surrealists as a
+        time themselves. And he sees surrealists as quite similar clocks. Later,
+        after the huge fight with them, he will write that he always was the most
+        original of them. But maybe by the time the \u201CThe Persistence of Memory\u201D
+        was created, the similarity of clocks symbolized that, like all other people,
+        surrealists in front of the war were equal.\r\n\r"
       objectReference: {fileID: 0}
     - target: {fileID: 5086260511080352453, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.x
@@ -9670,11 +9726,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: c42fcbf92a8270048ac7381380a423ff, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: c42fcbf92a8270048ac7381380a423ff, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 1
@@ -9737,7 +9793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 112.51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10018,15 +10074,33 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: e79b32878478f6549aef6bac0486a5c0, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
-      value: "Persistence of Memory exist in very similar versions, and while to
-        the uninformed it may appear that these are works by other artists inspired
-        by Dal\xED's work, the truth is that Dali himself painted other versions
-        of the paintings. Although our team firmly believes that Dali painted other
-        versions because he was not satisfied with the previous ones, the author
-        painted them having profit as a motif."
+      value: "In 1954, already after the World War II , Dali draws \u201CThe Disintegration
+        of the Persistence of Memory\u201D. We see the memory destroyed, the memory
+        destructed. After the Spanish revolution when Dali returns to Port Lligat
+        he sees his house destroyed. In 1954 piece of art there is no more clear
+        water in the background, the whole water law is hanging on, is holding to
+        the very thin naked tree. It is the illusion of normality. The building blocks
+        in motion are becoming bullets, symbolizing that instead of building something
+        new people once again used the progress to kill other people. We can see
+        the building  blocks through the unknown creature. After the wars not only
+        surrealists are melted, but all the ideas, all things they were laying in,
+        are melted too. The branch is now broken so it is just a matter of time than
+        the clock will fall. In \u201CThe Disintegration of the Persistence of Memory\u201D
+        Dali draws reflections to the mountains, which he hasn\u2019t drown in \u201CThe
+        Persistence of Memory\u201D. The fascists are defeated, so although the whole
+        picture, the whole world, people and Dali personal had known, is destroyed,
+        the future, the perspective looks real now. Even in this illusional normality,
+        but the reflection actually makes the mountains real. Bullets are going in
+        the direction of the lying clock and the dead fish in the sand. The wars
+        in one way or another affected all the surrealists and caused the floating
+        to the surface their personal issues. Like, once beautiful and clear, water
+        caused the floating of the dead fish. With the \u201CThe Disintegration of
+        the Persistence of Memory\u201D Dali tries to reconcile with other surrealists.
+        From the time perspective he realised that all their fights were mostly because
+        of the brokenness each of them carried."
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: titleText
@@ -10046,12 +10120,30 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: e79b32878478f6549aef6bac0486a5c0, type: 3}
     - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_text
-      value: "Persistence of Memory exist in very similar versions, and while to
-        the uninformed it may appear that these are works by other artists inspired
-        by Dal\xED's work, the truth is that Dali himself painted other versions
-        of the paintings. Although our team firmly believes that Dali painted other
-        versions because he was not satisfied with the previous ones, the author
-        painted them having profit as a motif."
+      value: "In 1954, already after the World War II , Dali draws \u201CThe Disintegration
+        of the Persistence of Memory\u201D. We see the memory destroyed, the memory
+        destructed. After the Spanish revolution when Dali returns to Port Lligat
+        he sees his house destroyed. In 1954 piece of art there is no more clear
+        water in the background, the whole water law is hanging on, is holding to
+        the very thin naked tree. It is the illusion of normality. The building blocks
+        in motion are becoming bullets, symbolizing that instead of building something
+        new people once again used the progress to kill other people. We can see
+        the building  blocks through the unknown creature. After the wars not only
+        surrealists are melted, but all the ideas, all things they were laying in,
+        are melted too. The branch is now broken so it is just a matter of time than
+        the clock will fall. In \u201CThe Disintegration of the Persistence of Memory\u201D
+        Dali draws reflections to the mountains, which he hasn\u2019t drown in \u201CThe
+        Persistence of Memory\u201D. The fascists are defeated, so although the whole
+        picture, the whole world, people and Dali personal had known, is destroyed,
+        the future, the perspective looks real now. Even in this illusional normality,
+        but the reflection actually makes the mountains real. Bullets are going in
+        the direction of the lying clock and the dead fish in the sand. The wars
+        in one way or another affected all the surrealists and caused the floating
+        to the surface their personal issues. Like, once beautiful and clear, water
+        caused the floating of the dead fish. With the \u201CThe Disintegration of
+        the Persistence of Memory\u201D Dali tries to reconcile with other surrealists.
+        From the time perspective he realised that all their fights were mostly because
+        of the brokenness each of them carried."
       objectReference: {fileID: 0}
     - target: {fileID: 5086260511080352453, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.x
@@ -10152,11 +10244,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: e79b32878478f6549aef6bac0486a5c0, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: e79b32878478f6549aef6bac0486a5c0, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 0.9844133
@@ -10215,7 +10307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 422.99
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
