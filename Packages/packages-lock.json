@@ -61,9 +61,9 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.xr.interaction.toolkit": "3.0.5",
-        "com.unity.xr.oculus": "4.3.0",
-        "com.unity.xr.openxr": "1.12.1"
+        "com.unity.xr.interaction.toolkit": "3.0.7",
+        "com.unity.xr.oculus": "4.4.0",
+        "com.unity.xr.openxr": "1.13.2"
       }
     },
     "com.unity.ide.rider": {
@@ -272,7 +272,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.transport": {
-      "version": "2.3.0",
+      "version": "2.4.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -292,7 +292,7 @@
       }
     },
     "com.unity.visualscripting": {
-      "version": "1.9.4",
+      "version": "1.9.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -302,7 +302,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.core-utils": {
-      "version": "2.3.0",
+      "version": "2.4.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -324,7 +324,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.interaction.toolkit": {
-      "version": "3.0.6",
+      "version": "3.0.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -362,7 +362,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.oculus": {
-      "version": "4.3.0",
+      "version": "4.4.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -371,7 +371,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.openxr": {
-      "version": "1.12.1",
+      "version": "1.13.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
