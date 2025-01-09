@@ -15737,7 +15737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853873, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Name
-      value: NarrativePlayer
+      value: NarrativePlayer (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_RootOrder
@@ -15798,13 +15798,20 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: 0b8d7bfd8bf563c4c9fa651fb738467d, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
-      value: Years later, even art started adapting to this situation. As a result,
-        we now live in times where you can buy a painting just like you buy a random
-        product in a supermarket. Art has never been so close for the taking! Maybe
-        you want a piece?
+      value: "It\u2019s worth mentioning that in 70ties Campbell was extremely successful
+        enterprise, canned soup was extremely popular and it seemed like it\u2019ll
+        exist forever. Warhol didn\u2019t set himself a task to perpetuate cans in
+        the memories of viewers, his goal was to perpetuate cans in the very same
+        condition artist experienced it during his lifetime. He has never made pop
+        art out of old people, sick people or unhappy people. It's like he wanted
+        to say \u2013 if even for the moment I could\u2019ve seen a happiness on
+        your face, or it\u2019s better to say \u2013 if I managed to capture that
+        momentary happiness, then you can\u2019t consider yourself as the absolutely
+        unhappy people. Warhol perceived a value of face, value of creating a character
+        through face."
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: titleText
@@ -15824,10 +15831,17 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 0b8d7bfd8bf563c4c9fa651fb738467d, type: 3}
     - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_text
-      value: Years later, even art started adapting to this situation. As a result,
-        we now live in times where you can buy a painting just like you buy a random
-        product in a supermarket. Art has never been so close for the taking! Maybe
-        you want a piece?
+      value: "It\u2019s worth mentioning that in 70ties Campbell was extremely successful
+        enterprise, canned soup was extremely popular and it seemed like it\u2019ll
+        exist forever. Warhol didn\u2019t set himself a task to perpetuate cans in
+        the memories of viewers, his goal was to perpetuate cans in the very same
+        condition artist experienced it during his lifetime. He has never made pop
+        art out of old people, sick people or unhappy people. It's like he wanted
+        to say \u2013 if even for the moment I could\u2019ve seen a happiness on
+        your face, or it\u2019s better to say \u2013 if I managed to capture that
+        momentary happiness, then you can\u2019t consider yourself as the absolutely
+        unhappy people. Warhol perceived a value of face, value of creating a character
+        through face."
       objectReference: {fileID: 0}
     - target: {fileID: 5086260511080352453, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.x
@@ -15924,11 +15938,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 0b8d7bfd8bf563c4c9fa651fb738467d, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 0b8d7bfd8bf563c4c9fa651fb738467d, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 1
@@ -15991,7 +16005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 285
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18097,7 +18111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853873, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Name
-      value: NarrativePlayer (1)
+      value: NarrativePlayer
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_RootOrder
@@ -18158,14 +18172,18 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: 5957abc937ffa9c4b8ea0afaf7b24f9e, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
-      value: "WELCOME TO THE CAPITALISTIC PARADISE\u2026.\r\n\u2026where you can
-        be like everybody else! No worries about your individualism - the system\u2019s
-        mechanism subjects everyone in the same way. You can all be influenced by
-        consumptionism and materialism in everyday life and live by the rules of
-        these processes."
+      value: "Campbell\u2019s Soup Cans is the most famous Andy Warhol\u2019s piece
+        of art. Warchol\u2019s Soup Cans have become a symbol of pop art, the symbol
+        of the artist himself, the work of art he is most associated with. During
+        his lifetime he was completely aware of it. In his diary for the 11th of
+        March 1977 he writes: \u201CI had a talk with Rick Li Brizzi at the office,
+        told him he was selling my Maos and Soup Cans too cheap\u201D . Warhol was
+        making Soup Cans in the 2 different periods of his artistic life. So the
+        first part of Soup Cans was made in 1962, second and the most important in
+        1968."
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: titleText
@@ -18185,11 +18203,15 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 5957abc937ffa9c4b8ea0afaf7b24f9e, type: 3}
     - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_text
-      value: "WELCOME TO THE CAPITALISTIC PARADISE\u2026.\r\n\u2026where you can
-        be like everybody else! No worries about your individualism - the system\u2019s
-        mechanism subjects everyone in the same way. You can all be influenced by
-        consumptionism and materialism in everyday life and live by the rules of
-        these processes."
+      value: "Campbell\u2019s Soup Cans is the most famous Andy Warhol\u2019s piece
+        of art. Warchol\u2019s Soup Cans have become a symbol of pop art, the symbol
+        of the artist himself, the work of art he is most associated with. During
+        his lifetime he was completely aware of it. In his diary for the 11th of
+        March 1977 he writes: \u201CI had a talk with Rick Li Brizzi at the office,
+        told him he was selling my Maos and Soup Cans too cheap\u201D . Warhol was
+        making Soup Cans in the 2 different periods of his artistic life. So the
+        first part of Soup Cans was made in 1962, second and the most important in
+        1968."
       objectReference: {fileID: 0}
     - target: {fileID: 5086260511080352453, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.x
@@ -18229,7 +18251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
-      value: 0.97943324
+      value: 0.97943336
       objectReference: {fileID: 0}
     - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Value
@@ -18286,11 +18308,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 5957abc937ffa9c4b8ea0afaf7b24f9e, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 5957abc937ffa9c4b8ea0afaf7b24f9e, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 1
@@ -18353,7 +18375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 388.49
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19870,7 +19892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853873, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Name
-      value: NarrativePlayer (2)
+      value: NarrativePlayer (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_RootOrder
@@ -19931,18 +19953,16 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: f2d6526e7a0070a44973524281028f82, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
-      value: "Everything around you is a copy of Andy Warhol\u2019s piece of art
-        - Campbell\u2019s Soup Cans. The precursor of the Pop Art movement created
-        his art as an answer to mass consumption. Through his art, he wanted to show
-        people the scale of concern\u2019s world negative policy. Thanks to these
-        concerns you can see them right now. Copied in hundreds of pieces! Isn\u2019t
-        it amazing? But don\u2019t worry about Warhol\u2019s flights of fantasy, 
-        the process in our company is 100% harmless and safe. The side effects are
-        only the exploitation of art, lack of emotion in the creation process and
-        disorder of artistic values."
+      value: "Soup Cans from 1968 are determined by mechanicality, or, it\u2019s
+        better to say, rhythm. The first version of his soup cans he had drown during
+        his most full with pieces of art period of creativity \u2013 decade before
+        he was shot by Valerie Solanas, one of the world most famous feminists. Soup
+        Cans from 1968 were Warhol's short return to, himself created, foundations
+        of Pop Art. Later, when he draws with Jean-Michel Basquiat, he has a blooming
+        of his art once again."
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: titleText
@@ -19962,15 +19982,13 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: f2d6526e7a0070a44973524281028f82, type: 3}
     - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_text
-      value: "Everything around you is a copy of Andy Warhol\u2019s piece of art
-        - Campbell\u2019s Soup Cans. The precursor of the Pop Art movement created
-        his art as an answer to mass consumption. Through his art, he wanted to show
-        people the scale of concern\u2019s world negative policy. Thanks to these
-        concerns you can see them right now. Copied in hundreds of pieces! Isn\u2019t
-        it amazing? But don\u2019t worry about Warhol\u2019s flights of fantasy, 
-        the process in our company is 100% harmless and safe. The side effects are
-        only the exploitation of art, lack of emotion in the creation process and
-        disorder of artistic values."
+      value: "Soup Cans from 1968 are determined by mechanicality, or, it\u2019s
+        better to say, rhythm. The first version of his soup cans he had drown during
+        his most full with pieces of art period of creativity \u2013 decade before
+        he was shot by Valerie Solanas, one of the world most famous feminists. Soup
+        Cans from 1968 were Warhol's short return to, himself created, foundations
+        of Pop Art. Later, when he draws with Jean-Michel Basquiat, he has a blooming
+        of his art once again."
       objectReference: {fileID: 0}
     - target: {fileID: 5086260511080352453, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.x
@@ -20010,7 +20028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
-      value: 0.54438025
+      value: 0.5443803
       objectReference: {fileID: 0}
     - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Value
@@ -20071,11 +20089,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: f2d6526e7a0070a44973524281028f82, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: f2d6526e7a0070a44973524281028f82, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 0.6396101
@@ -20134,7 +20152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 698.96
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26568,9 +26586,9 @@ Transform:
   - {fileID: 3286216433768594029}
   - {fileID: 2984035252920159085}
   - {fileID: 2972467349170930539}
-  - {fileID: 2969167253206820166}
   - {fileID: 3573897309076854557}
   - {fileID: 3838640045141630360}
+  - {fileID: 2969167253206820166}
   - {fileID: 7284570585622551277}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31124,7 +31142,7 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: c8841fbf9bc9f4b4986c2e0e9c63367c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: Now, you can see the heart of the production when everything begins.
@@ -31195,7 +31213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
-      value: 0.8995485
+      value: 0.8995486
       objectReference: {fileID: 0}
     - target: {fileID: 5377151264235720616, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Value
@@ -31319,7 +31337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 422.99
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
