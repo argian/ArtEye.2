@@ -65,6 +65,9 @@ namespace ArtEye
 
         private void Update()
         {
+            if (!audioSource.clip)
+                return;
+            
             if (_isVisible && audioSource.isPlaying)
                 UpdatePlaybackSliderAndText();
 
@@ -132,6 +135,8 @@ namespace ArtEye
         private void PlayOrRestart()
         {
             playButtonImage.sprite = pauseIcon;
+            if (!audioSource.clip)
+                return;
             if (audioSource.time == 0)
                 _playbackTime = 0;
             audioSource.time = _playbackTime;
@@ -140,13 +145,18 @@ namespace ArtEye
 
         private void Pause()
         {
-            _playbackTime = audioSource.time;
             playButtonImage.sprite = playIcon;
+            if (!audioSource.clip)
+                return;
+            _playbackTime = audioSource.time;
             audioSource.Pause();
         }
 
         public void Seek(float playbackPercent)
         {
+            if (!audioSource.clip)
+                return;
+            
             audioSource.time = audioSource.clip.length * playbackPercent;
             _playbackTime = audioSource.time;
             
