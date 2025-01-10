@@ -45,6 +45,8 @@ Shader "ArtEye/RaySkybox"
             // This line defines the name of the fragment shader.
             #pragma fragment frag
 
+            #pragma target 2.0
+
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             
             #include "Assets/_Project/Shaders/General/RayTracing.cginc"

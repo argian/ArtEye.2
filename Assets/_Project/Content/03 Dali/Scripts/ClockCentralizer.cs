@@ -21,7 +21,7 @@ namespace ArtEye
 
 		protected override void PassToRender()
 		{
-			MainMaterial.SetVector(PropertyIDs[0], new Vector4(transform.position.x, transform.position.y + (meltingThreshold - 0.5f) * transform.localScale.y * 2, transform.position.z, 0));
+			MainMaterial.SetVector(PropertyIDs[0], new Vector4(transform.position.x, transform.position.y + (meltingThreshold - 0.5f) * transform.lossyScale.y * 2, transform.position.z, 0));
 		}
 	}
 }
