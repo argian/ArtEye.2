@@ -32,6 +32,8 @@ Shader "ArtEye/AreaOutline"
             // This line defines the name of the fragment shader.
             #pragma fragment frag
 
+            #pragma target 2.0
+
             //basic library
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             //depth texture
@@ -87,6 +89,7 @@ Shader "ArtEye/AreaOutline"
 
         half4 frag(Varyings IN) : SV_Target
         {
+            UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(IN);
             // To calculate the UV coordinates for sampling the depth buffer,
             // divide the pixel location by the render target resolution
             // _ScaledScreenParams.
