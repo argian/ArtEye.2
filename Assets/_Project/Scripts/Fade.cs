@@ -54,11 +54,13 @@ namespace ArtEye
 
         private void FadeOut()
         {
+            if (!_fadeInProgress)
+                return;
+
             _material.SetFloat(_alpha, 1);
             cover.SetActive(true);
 
-
-            _material.DOFloat(0, _alpha, _delay)
+            _material.DOFloat(0, _alpha, _speed)
                      .SetDelay(_delay)
                      .SetEase(_ease)
                      .OnComplete(() => {
