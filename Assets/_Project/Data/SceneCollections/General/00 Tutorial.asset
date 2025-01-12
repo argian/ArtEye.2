@@ -15,4 +15,4 @@ MonoBehaviour:
   <SceneAsset>k__BackingField: {fileID: 102900000, guid: a43c3a17aaa3496489b8696172e3fd70, type: 3}
   <ScenePath>k__BackingField: Assets/_Project/Scenes/00 Tutorial.unity
   <SceneHash>k__BackingField: 1692521397
-  <IncludeInBuild>k__BackingField: 0
+  <IncludeInBuild>k__BackingField: 1
