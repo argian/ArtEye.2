@@ -5,31 +5,31 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Project/Scenes/00 Tutorial.unity
     guid: a43c3a17aaa3496489b8696172e3fd70
   - enabled: 1
     path: Assets/_Project/Scenes/00 Lobby.unity
     guid: 7ae10f25f3f7a324b91ba2fd443a844e
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Project/Scenes/01 Malewicz.unity
     guid: aa2d885914ea3eb4e8db0737ab533fe3
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Project/Scenes/02 Warhol.unity
     guid: 4eda360da03f46c4287f4484ccbc8642
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Project/Scenes/03 Dali.unity
     guid: 08940dfe7811fc84fbf80c22daefbe49
   - enabled: 0
     path: Assets/_Project/Scenes/04 DaVinci.unity
     guid: 5c526d939845bfc489a30020766f1fff
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Project/Scenes/05 Lascaux.unity
     guid: 9655d016056bc90418182301356172eb
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Project/Scenes/06 Velasquez.unity
     guid: b37e5999da8ed674f92c8893bee400cd
-  - enabled: 0
+  - enabled: 1
     path: Assets/_Project/Scenes/07 Dyskobol.unity
     guid: c9f62cbf8c2c95641a94e1ff273b83ba
   m_configObjects:
