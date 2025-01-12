@@ -1339,7 +1339,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: b9b5be493ef96b04885d98eefed5d25e, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e5fc6ba883b9b9540bba56425174b627, type: 2}
+      objectReference: {fileID: 2100000, guid: ebe10b9e697a089469616a4e5a077eec, type: 2}
     - target: {fileID: 919132149155446097, guid: b9b5be493ef96b04885d98eefed5d25e, type: 3}
       propertyPath: m_Name
       value: discobolus
