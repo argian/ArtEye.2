@@ -10697,7 +10697,7 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: 07046f19ef7bb724a9426e391b0fc4f1, type: 3}
+      objectReference: {fileID: 8300000, guid: 1ff602790f6a41f479a9a8a3536901b0, type: 3}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: You're probably looking at me now thinking I have nothing inside. Have
@@ -10805,11 +10805,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 07046f19ef7bb724a9426e391b0fc4f1, type: 3}
+      objectReference: {fileID: 8300000, guid: 1ff602790f6a41f479a9a8a3536901b0, type: 3}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 07046f19ef7bb724a9426e391b0fc4f1, type: 3}
+      objectReference: {fileID: 8300000, guid: 1ff602790f6a41f479a9a8a3536901b0, type: 3}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -16365,7 +16365,7 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: a95b8962171fd2b4ca2977d211987f5a, type: 3}
+      objectReference: {fileID: 8300000, guid: d00a7a1ba5095f64d924a58153872127, type: 3}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: I want to show you something. Come closer. Let yourself be absorbed.
@@ -16465,11 +16465,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: a95b8962171fd2b4ca2977d211987f5a, type: 3}
+      objectReference: {fileID: 8300000, guid: d00a7a1ba5095f64d924a58153872127, type: 3}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: a95b8962171fd2b4ca2977d211987f5a, type: 3}
+      objectReference: {fileID: 8300000, guid: d00a7a1ba5095f64d924a58153872127, type: 3}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -17202,7 +17202,7 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: 1cff7b19816756d429ddae6c0d02883c, type: 3}
+      objectReference: {fileID: 8300000, guid: 60e861272d7ff5448bcc89ffaa35135a, type: 3}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: Endless darkness. Silence. Flashes of shapes, fractals, objects. Order.
@@ -17332,11 +17332,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 1cff7b19816756d429ddae6c0d02883c, type: 3}
+      objectReference: {fileID: 8300000, guid: 60e861272d7ff5448bcc89ffaa35135a, type: 3}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 1cff7b19816756d429ddae6c0d02883c, type: 3}
+      objectReference: {fileID: 8300000, guid: 60e861272d7ff5448bcc89ffaa35135a, type: 3}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 1
@@ -18877,7 +18877,7 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: 56e6d73c5bdb6304da7e7149024d04aa, type: 3}
+      objectReference: {fileID: 8300000, guid: 891bdd5abaa2e40458db08b7443f55e6, type: 3}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: Who are you? Do you know the answer? Do you know who you are for yourself?
@@ -19039,11 +19039,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 56e6d73c5bdb6304da7e7149024d04aa, type: 3}
+      objectReference: {fileID: 8300000, guid: 891bdd5abaa2e40458db08b7443f55e6, type: 3}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 56e6d73c5bdb6304da7e7149024d04aa, type: 3}
+      objectReference: {fileID: 8300000, guid: 891bdd5abaa2e40458db08b7443f55e6, type: 3}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 0.8674997
@@ -19582,7 +19582,7 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: 7619d1dc0cd7aec4e8b62dda6360262f, type: 3}
+      objectReference: {fileID: 8300000, guid: 3b7fc25e95aab384b8f2e16e50b72d5d, type: 3}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: Sometimes when looking at a work of art we wonder what the author wanted
@@ -19688,11 +19688,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 7619d1dc0cd7aec4e8b62dda6360262f, type: 3}
+      objectReference: {fileID: 8300000, guid: 3b7fc25e95aab384b8f2e16e50b72d5d, type: 3}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7619d1dc0cd7aec4e8b62dda6360262f, type: 3}
+      objectReference: {fileID: 8300000, guid: 3b7fc25e95aab384b8f2e16e50b72d5d, type: 3}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

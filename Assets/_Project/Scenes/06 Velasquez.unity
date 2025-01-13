@@ -1970,6 +1970,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ab53051cbb3e814e9d7e664a1eb65b4, type: 3}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: "The only way out of the room is in the direction of Don Jos\xE9 Nieto
         Vel\xE1zquez - the queen's chamberlain, looking right at the backs of his
@@ -2063,6 +2067,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ab53051cbb3e814e9d7e664a1eb65b4, type: 3}
+    - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ab53051cbb3e814e9d7e664a1eb65b4, type: 3}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2077,7 +2089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 905.95
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2691,7 +2703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 1
-  size: {x: 12.485029, y: 8.83184, z: 23.325623}
+  size: {x: 12.485029, y: 8.83184, z: 23.32562}
   overrideRendererFilters: 0
   minRendererVolumeSize: 0.1
   objectLayerMask:
@@ -2731,7 +2743,7 @@ Transform:
   m_GameObject: {fileID: 1126077522}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9073777, y: 3.1017334, z: 2.9414606}
+  m_LocalPosition: {x: 2.9073777, y: 3.1017334, z: 2.9414597}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2882,6 +2894,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b07f76aeecc57104b9790ab0cd27ca1f, type: 3}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: "Himself, an artist, Vel\xE1zquez draws near the rest of the characters,
         he accepts their perspective and draws royalty from the respective of the
@@ -2971,6 +2987,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: b07f76aeecc57104b9790ab0cd27ca1f, type: 3}
+    - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b07f76aeecc57104b9790ab0cd27ca1f, type: 3}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2985,7 +3009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 836.95
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3834,8 +3858,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.85037243, y: 2.1440573, z: 0.44837773}
-  m_Center: {x: 0.05953905, y: 0.07045716, z: -0.2241888}
+  m_Size: {x: 1.3546199, y: 2.3151236, z: 0.44837773}
+  m_Center: {x: 0.31166273, y: 0.1559903, z: -0.2241888}
 --- !u!1001 &1364799462
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3981,6 +4005,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a634afa027b87be419ff80ed3d35400c, type: 3}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: "In the foreground of the picture we see Infanta Margaret Theresa, a
         daughter of by Vel\xE1zquez\u2019s very friend kind Philip IV. She is the
@@ -4062,6 +4090,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: a634afa027b87be419ff80ed3d35400c, type: 3}
+    - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a634afa027b87be419ff80ed3d35400c, type: 3}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4076,7 +4112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 664.47
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_AnchoredPosition.x

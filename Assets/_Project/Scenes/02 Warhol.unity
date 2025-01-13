@@ -15075,7 +15075,7 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 969be5c15baf0c849b2c738e4ec68ca4, type: 3}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: "It\u2019s worth mentioning that in 70ties Campbell was extremely successful
@@ -15215,11 +15215,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 969be5c15baf0c849b2c738e4ec68ca4, type: 3}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 969be5c15baf0c849b2c738e4ec68ca4, type: 3}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 1
@@ -15282,7 +15282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 802.46
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17423,7 +17423,7 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: b8ae3f9efe160ab47abe0f778f91761f, type: 3}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: "Campbell\u2019s Soup Cans is the most famous Andy Warhol\u2019s piece
@@ -17559,11 +17559,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: b8ae3f9efe160ab47abe0f778f91761f, type: 3}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: b8ae3f9efe160ab47abe0f778f91761f, type: 3}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 1
@@ -17626,7 +17626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 629.97
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19200,7 +19200,7 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: d6a156156620356488a59e22574b3e52, type: 3}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: "Soup Cans from 1968 are determined by mechanicality, or, it\u2019s
@@ -19336,11 +19336,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: d6a156156620356488a59e22574b3e52, type: 3}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: d6a156156620356488a59e22574b3e52, type: 3}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 0.6396101
@@ -19399,7 +19399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 526.48
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30294,7 +30294,7 @@ PrefabInstance:
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: c00a1975bf692994fb0208527041c18d, type: 3}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: text
       value: Now, you can see the heart of the production when everything begins.
@@ -30422,11 +30422,11 @@ PrefabInstance:
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: c8841fbf9bc9f4b4986c2e0e9c63367c, type: 3}
+      objectReference: {fileID: 8300000, guid: c00a1975bf692994fb0208527041c18d, type: 3}
     - target: {fileID: 6540856881800942994, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: c8841fbf9bc9f4b4986c2e0e9c63367c, type: 3}
+      objectReference: {fileID: 8300000, guid: c00a1975bf692994fb0208527041c18d, type: 3}
     - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_Size
       value: 1
@@ -30489,7 +30489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 422.99
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175, type: 3}
       propertyPath: m_LocalPosition.x
