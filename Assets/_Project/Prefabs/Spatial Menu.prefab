@@ -2005,6 +2005,98 @@ MonoBehaviour:
   m_Image: {fileID: 100852287457566568}
   m_CanvasGroup: {fileID: 0}
   m_IgnoreAlpha: 0
+--- !u!1 &6847623279507979164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 492466281173363902}
+  - component: {fileID: 6629045292784697642}
+  - component: {fileID: 9127805240690863670}
+  - component: {fileID: 8449701673771999348}
+  m_Layer: 5
+  m_Name: CreditsView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &492466281173363902
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6847623279507979164}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6404559804501863901}
+  m_Father: {fileID: 5354273024643691559}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200.00002, y: -2933.58}
+  m_SizeDelta: {x: 352, y: 5839.16}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6629045292784697642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6847623279507979164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 1
+  m_Spacing: 7
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &9127805240690863670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6847623279507979164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
+--- !u!114 &8449701673771999348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6847623279507979164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01ba016c144deb547b6214ef32ad3baa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Header>k__BackingField: Credits
 --- !u!1 &8136229882416736578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2135,9 +2227,11 @@ MonoBehaviour:
   menuActionRef: {fileID: -5171983999882372696, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   menuActionTrigger: {fileID: 11400000, guid: fe89def61d6f9b348be8d4db8fc8c672, type: 2}
   offset: {x: 0, y: -0.5, z: 1.25}
+  toggleDistance: 8
   header: {fileID: 6792005656525114126}
   backButton: {fileID: 1252532965861898101}
   currentView: {fileID: 8856354216593716283}
+  scrollRect: {fileID: 7921909370327392212}
 --- !u!137 &9163333044079182022
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -2579,6 +2673,186 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!1 &9138127867647509843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6404559804501863901}
+  - component: {fileID: 7891984745636046446}
+  - component: {fileID: 6650820957676880637}
+  - component: {fileID: 365741474238657163}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6404559804501863901
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9138127867647509843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 492466281173363902}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 176, y: -2919.58}
+  m_SizeDelta: {x: 352, y: 5839.16}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7891984745636046446
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9138127867647509843}
+  m_CullTransparentMesh: 1
+--- !u!114 &6650820957676880637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9138127867647509843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "<align=\"center\"><b>v2.0</b></align>\r\nProgrammers/Developers:\r\n-
+    Micha\u0142 Biernat\r\n- Pawe\u0142 Kr\xF3l\r\n- Adam Migdalski\r\n3D Artists/Level
+    Designers:\r\n- Anna Hosumbek\r\n- Dawid Krzemi\u0144ski\r\nWriters:\r\n- Dariusz
+    Serwaczak\r\n- Mariia Pechenizka-Tkachova\r\n\r\n<align=\"center\"><b>v1.0 (VRC)</b></align>\r\nProducer\r\n-
+    Michalina Rawicka\r\nCo-Producer &\r\nLead Unity Developer\r\n- Micha\u0142 Biernat\r\nLead
+    Designer &\r\nShader Programmer\r\n- Adam Migdalski\r\nUnity Developer \r\n-
+    Pawe\u0142 Kr\xF3l\r\nLevel Artist & Designer \r\n- Anna Hosumbek\r\n3D Artist
+    \r\n- Patryk Wa\u0142aszek\r\nLead Narrative Designer &\r\nScreenwriter\r\n-
+    Wojciech Matuszewski\r\nConcept Artist &\r\nLevel Designer\r\n- Sandra Szyma\u0144ska\r\nWriter
+    & Editor\r\n- Eli\u0161ka Soukupov\xE1\r\nEditors\r\n- Maja Duszak\r\n- Zuzanna
+    Adamowicz\r\n\r\n<align=\"center\"><b>Attributions</b></align>\r\n\r\nThird-party
+    assets not listed here are licensed under Unity Standard Asset Store EULA or
+    CC0 (Public Domain).\r\n\r\n<b>Sponza:</b>\r\nhttps://github.com/Unity-Technologies/Classic-Sponza/tree/main#credits\r\nhttps://github.com/Unity-Technologies/Classic-Sponza/blob/main/Third
+    Party Notices.md\r\n\r\n<b>Models:</b>\r\n\"Door\" (https://skfb.ly/6TVsT) by
+    Zian is licensed under Creative Commons Attribution (4.0)\r\n\r\n\"Aged 4-Piece
+    Furniture Set\" (https://skfb.ly/oNJJF) by Glowbox 3D is licensed under Creative
+    Commons Attribution (4.0)\r\n\r\n\"Red Curtain\" (https://skfb.ly/oxRBu) by fella'
+    is licensed under Creative Commons Attribution (4.0)\r\n\r\n\"Stage Curtains\"
+    (https://skfb.ly/6D7TS) by daedaljs is licensed under Creative Commons Attribution
+    (4.0)\r\n\r\n\"Wooden table (low poly)\" (https://skfb.ly/oKSBO) by Andrey 3D
+    is licensed under Creative Commons Attribution (4.0)\r\n\r\n\"Flashlight\" by
+    MAR.COS. is licensed under Creative Commons Attribution (4.0)\r\nhttps://sketchfab.com/3d-models/flashlight-5fa9a65e7b0141ee877ed18f4f42d953\r\n\r\n\"Torch
+    stick\" by DJMaesen is licensed under Creative Commons Attribution (4.0)\r\nhttps://sketchfab.com/3d-models/torch-stick-d8eadee1a5c14483aade99b1fe5bc150\r\n\r\n<b>Paintings:</b>\r\nPuszki
+    Campbella\r\nhttps://en.wikipedia.org/wiki/File:Campbells_Soup_Cans_MOMA.jpg\r\nLicencja:
+    Fair Use\r\n\r\nDyskobol\r\nhttps://commons.wikimedia.org/wiki/File:Discobolus_in_National_Roman_Museum_Palazzo_Massimo_alle_Terme.JPG\r\nLicencja:
+    Creative Commons Attribution-Share Alike 4.0 International\r\n\r\nGuernica\r\nhttps://commons.wikimedia.org/wiki/File:Mural_del_Gernika.jpg\r\nLicencja:
+    Creative Commons Attribution-Share Alike 3.0 Unported\r\n\r\nTrwa\u0142o\u015B\u0107
+    pami\u0119ci\r\nhttps://en.wikipedia.org/wiki/File:The_Persistence_of_Memory.jpg\r\nLicencja:
+    Fair use\r\n\r\n<b>Lascaux / Altamira:</b>\r\n\r\nhttps://sketchfab.com/3d-models/realistic-cave-20-592df02d5d2a4ed099c23520321ffa23\r\n\r\nhttps://sketchfab.com/3d-models/cave-lp-9k-free-download-819687653df14a4a9acb267212093d1a\r\n\r\nhttps://sketchfab.com/3d-models/cave-rocks-ea11069c86ce410d8c8e7423d87344de\r\n\r\nhttps://sketchfab.com/3d-models/low-poly-rome-set-feca4a9e824c466e8a5ab976a8c42bab\r\n\r\nhttps://sketchfab.com/3d-models/roman-baths-free-game-asset-ecc5e51b577a48b498dfcc87ee41f779\r\n\r\nhttps://pl.wikipedia.org/wiki/Graffiti_Aleksamenosa#/media/Plik:Christparody.jpg\r\n\r\nhttps://commons.wikimedia.org/w/index.php?curid=81082390\r\n\r\nBy
+    Jack Versloot - originally posted to Flickr as Lascaux II, CC BY 2.0,\r\nhttps://commons.wikimedia.org/w/index.php?curid=5073914\r\n\r\nhttps://www.worldhistory.org/image/3537/cave-painting-in-the-altamira-cave/\r\n\r\n<b>Dyskobol:</b>\r\nhttps://ambientcg.com/view?id=Marble015\r\n\r\nhttps://sketchfab.com/3d-models/discobolus-the-discus-thrower-50f50abf45414ad8a658325df7a5fcb3\r\n\r\nhttps://sketchfab.com/3d-models/ancient-greek-kiosk-68f499bfdfe24b36ae9171a9eb0fe8d2"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 26
+  m_fontSizeBase: 26
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 8
+  m_fontSizeMax: 12
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 5, y: 5, z: 5, w: 5}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &365741474238657163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9138127867647509843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
 --- !u!1001 &2493782692834829307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3218,6 +3492,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1035790433963668018, guid: 085ce58b196caa446a8545c9dd388793, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8612988594847183332}
+    - targetCorrespondingSourceObject: {fileID: 1035790433963668018, guid: 085ce58b196caa446a8545c9dd388793, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 492466281173363902}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 085ce58b196caa446a8545c9dd388793, type: 3}
 --- !u!114 &100852287457566568 stripped
@@ -3255,6 +3532,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7921909370327392212 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3017879602858219969, guid: 085ce58b196caa446a8545c9dd388793, type: 3}
+  m_PrefabInstance: {fileID: 4904964371889849877}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &4922198257571340993
@@ -4497,7 +4785,7 @@ PrefabInstance:
     - target: {fileID: 7753147258609537286, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 1170257183984579486}
+      objectReference: {fileID: 8449701673771999348}
     - target: {fileID: 7753147258609537286, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ArtEye.MenuView, Assembly-CSharp
