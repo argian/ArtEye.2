@@ -1,6 +1,8 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 namespace ArtEye
 {
@@ -19,6 +21,9 @@ namespace ArtEye
 
         [SerializeField] private MenuView currentView;
         private MenuView _previousView;
+
+        [Space]
+        [SerializeField] private ScrollRect scrollRect;
 
         Transform _hmdTransform;
 
@@ -80,6 +85,8 @@ namespace ArtEye
             header.SetText(currentView.Header);
 
             backButton.SetActive(true);
+
+            scrollRect.verticalNormalizedPosition = 1;
         }
 
         public void GoBack()
@@ -95,6 +102,8 @@ namespace ArtEye
 
             backButton.SetActive(false);
             _previousView = null;
+
+            scrollRect.verticalNormalizedPosition = 1;
         }
     }
 }
