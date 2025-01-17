@@ -3,7 +3,27 @@ guid: 39f7686e9b33f7042803bf70636aa421
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Arch_and_pillars
+    second: {fileID: 2100000, guid: d7bde6d8a64469745ba09bc3d4014c94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Changing_rooms
+    second: {fileID: 2100000, guid: 2fda3de8a786aeb4cb617f2565a7dcf8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ground
+    second: {fileID: 2100000, guid: f303369d34bbd6f4ea0e5f684e3d2d30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roofs
+    second: {fileID: 2100000, guid: 027b381f6b2bc044f8ec836d7bb32540, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

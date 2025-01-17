@@ -3,7 +3,12 @@ guid: 33207d376211504469fb598bfb71c490
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: torchstick
+    second: {fileID: 2100000, guid: c912c79fe46310044b1dd9aaf4761a82, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
