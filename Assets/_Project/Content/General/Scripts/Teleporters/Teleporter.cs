@@ -17,8 +17,7 @@ namespace ArtEye.Teleportation
                 return;
             }
 
-            playerObject.transform.position = linkedTeleporter.TeleporterExit.position;
-            playerObject.transform.rotation = linkedTeleporter.TeleporterExit.rotation;
+            XRRigManager.Instance.MoveXRRig(linkedTeleporter.TeleporterExit);
         }
     }
 }

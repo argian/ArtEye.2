@@ -1664,18 +1664,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 511129519}
     m_Modifications:
-    - target: {fileID: 3449957855930112747, guid: 5bb5b169761c8c84ba8672c8572a260d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3449957855930112747, guid: 5bb5b169761c8c84ba8672c8572a260d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3449957855930112747, guid: 5bb5b169761c8c84ba8672c8572a260d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.708
-      objectReference: {fileID: 0}
     - target: {fileID: 4471059212278623234, guid: 5bb5b169761c8c84ba8672c8572a260d, type: 3}
       propertyPath: m_Name
       value: Teleporter MainFloor
@@ -2947,7 +2935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.00048828125}
   m_SizeDelta: {x: -12, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &1896927706937035488
@@ -4012,14 +4000,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 912189297}
     m_Modifications:
-    - target: {fileID: 3449957855930112747, guid: 5bb5b169761c8c84ba8672c8572a260d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3449957855930112747, guid: 5bb5b169761c8c84ba8672c8572a260d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.61
-      objectReference: {fileID: 0}
     - target: {fileID: 4471059212278623234, guid: 5bb5b169761c8c84ba8672c8572a260d, type: 3}
       propertyPath: m_Name
       value: Teleporter UpperFloor
@@ -4238,7 +4218,7 @@ Transform:
   m_GameObject: {fileID: 8674718127773306426}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 4.677, y: 0, z: -0}
+  m_LocalPosition: {x: 3.996, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4451,7 +4431,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7161029050332260685}
   m_HandleRect: {fileID: 6869264784065486127}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 1.0000001
   m_Size: 0.058901113
   m_NumberOfSteps: 0
   m_OnValueChanged:

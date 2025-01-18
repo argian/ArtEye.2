@@ -10,14 +10,17 @@ namespace ArtEye
         {
             _fade = XRRigManager.Instance.XRRig.GetComponentInChildren<Fade>();
 
-            if (_fade)
-                _fade.SetFade(true, .5f);
+            if (!_fade)
+                return;
+
+            _fade.ForceComplete();
+            _fade.SetCover(true, .5f);
         }
 
         private void OnDestroy()
         {
             if (_fade)
-                _fade.SetFade(false, 0);
+                _fade.SetCover(false, 0);
         }
     }
 }

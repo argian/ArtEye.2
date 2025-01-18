@@ -14,25 +14,26 @@ namespace ArtEye
         [SerializeField] private float _delay = .25f;
         [SerializeField] private Ease _ease = Ease.Linear;
         [Space]
-        [SerializeField] private bool _enabled;
+        [SerializeField] private bool animate;
 
         private bool _fadeInProgress;
 
         private Material _material;
 
-        private void Awake()
-        {
-            _material = cover.GetComponent<Renderer>().material;
-        }
+        private Tween _tween;
 
-        private void OnEnable()
+        private void Awake()
         {
             TeleporterBase.OnTeleportationStart += FadeIn;
             TeleporterBase.OnTeleportationEnd += FadeOut;
             SceneLoader.OnLoadEnd += FadeOut;
+
+            _material = cover.GetComponent<Renderer>().material;
+
+            SetCover(false, 0);
         }
 
-        private void OnDisable()
+        private void OnDestroy()
         {
             TeleporterBase.OnTeleportationStart -= FadeIn;
             TeleporterBase.OnTeleportationEnd -= FadeOut;
@@ -46,17 +47,17 @@ namespace ArtEye
 
             _fadeInProgress = true;
 
-            if (!_enabled)
+            if (!animate)
             {
                 callback?.Invoke();
                 return;
-            }
+            }    
 
-            SetFade(true, 0);
+            cover.SetActive(true);
 
-            _material.DOFloat(1, _alpha, _speed)
-                     .SetEase(_ease)
-                     .OnComplete(() => callback?.Invoke());
+            _tween = _material.DOFloat(1, _alpha, _speed)
+                              .SetEase(_ease)
+                              .OnComplete(() => callback?.Invoke());
         }
 
         private void FadeOut()
@@ -64,27 +65,35 @@ namespace ArtEye
             if (!_fadeInProgress)
                 return;
 
-            if (!_enabled)
+            if (!animate)
             {
                 _fadeInProgress = false;
                 return;
             }
 
-            SetFade(true, 1);
+            cover.SetActive(true);
 
-            _material.DOFloat(0, _alpha, _speed)
-                     .SetDelay(_delay)
-                     .SetEase(_ease)
-                     .OnComplete(() => {
-                         cover.SetActive(false);
-                         _fadeInProgress = false;
-                     });
+            _tween = _material.DOFloat(0, _alpha, _speed)
+                              .SetDelay(_delay)
+                              .SetEase(_ease)
+                              .OnComplete(() => {
+                                  cover.SetActive(false);
+                                  _fadeInProgress = false;
+                              });
         }
 
-        public void SetFade(bool enabled, float value)
+        public void SetCover(bool enabled, float value)
         {
             _material.SetFloat(_alpha, value);
             cover.SetActive(enabled);
+        }
+
+        public void ForceComplete()
+        {
+            if (_tween == null || !_fadeInProgress)
+                return;
+
+            _tween.Complete();
         }
     }
 }

@@ -9,6 +9,7 @@ namespace ArtEye
     public class XRRigManager : MonoSingleton<XRRigManager>
     {
         public GameObject XRRig { get; private set; }
+        private Transform _xrCamera;
 
         [SerializeField] private GameObject XRRigPrefab;
 
@@ -34,6 +35,7 @@ namespace ArtEye
 
             XRRig = Instantiate(XRRigPrefab, transform);
             XRRig.name = XRRigPrefab.name;
+            _xrCamera = XRRig.GetComponent<XROrigin>().Camera.transform;
 
         #if PLATFORM_STANDALONE || UNITY_EDITOR
             if (!XRDeviceSimulatorPrefab)
@@ -126,8 +128,21 @@ namespace ArtEye
         [ContextMenu("Move XR Rig To Spawn")]
         public void MoveXRRigToSpawn()
         {
-            if (XRRig && _spawn)
-                XRRig.transform.SetPositionAndRotation(_spawn.position, _spawn.rotation);
+            if (_spawn)
+                MoveXRRig(_spawn);
+        }
+
+        public void MoveXRRig(Transform destination)
+        {
+            if (!XRRig || !_xrCamera || !destination)
+                return;
+
+            var camRot = Quaternion.Euler(0, _xrCamera.eulerAngles.y, 0);
+            var dstRot = Quaternion.Euler(0, destination.eulerAngles.y, 0);
+            var rotAdjustment = dstRot * Quaternion.Inverse(camRot);
+            var newRot = rotAdjustment * XRRig.transform.rotation;
+
+            XRRig.transform.SetPositionAndRotation(destination.position, newRot);
         }
     }
 }
