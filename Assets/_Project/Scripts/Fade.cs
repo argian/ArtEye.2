@@ -13,6 +13,8 @@ namespace ArtEye
         [SerializeField] private float _speed = .5f;
         [SerializeField] private float _delay = .25f;
         [SerializeField] private Ease _ease = Ease.Linear;
+        [Space]
+        [SerializeField] private bool _enabled;
 
         private bool _fadeInProgress;
 
@@ -44,8 +46,13 @@ namespace ArtEye
 
             _fadeInProgress = true;
 
-            _material.SetFloat(_alpha, 0);
-            cover.SetActive(true);
+            if (!_enabled)
+            {
+                callback?.Invoke();
+                return;
+            }
+
+            SetFade(true, 0);
 
             _material.DOFloat(1, _alpha, _speed)
                      .SetEase(_ease)
@@ -57,8 +64,13 @@ namespace ArtEye
             if (!_fadeInProgress)
                 return;
 
-            _material.SetFloat(_alpha, 1);
-            cover.SetActive(true);
+            if (!_enabled)
+            {
+                _fadeInProgress = false;
+                return;
+            }
+
+            SetFade(true, 1);
 
             _material.DOFloat(0, _alpha, _speed)
                      .SetDelay(_delay)
@@ -67,6 +79,12 @@ namespace ArtEye
                          cover.SetActive(false);
                          _fadeInProgress = false;
                      });
+        }
+
+        public void SetFade(bool enabled, float value)
+        {
+            _material.SetFloat(_alpha, value);
+            cover.SetActive(enabled);
         }
     }
 }
