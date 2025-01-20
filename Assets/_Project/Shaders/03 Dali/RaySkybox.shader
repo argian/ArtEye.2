@@ -222,11 +222,13 @@ Shader "ArtEye/RaySkybox"
                 float3 normals = float3(0, 0, 0);
 
                 float4 colTemp = float4(0, 0, 0, 0);
+                float lightAngle = VectorAngle(-rayDir, float3(0, 1, 0));
                 //main ground
                 colTemp = CubePatternPlane(rayDir, MainGroundPos.xyz, FacingDir.xyz, float3(1000, 1, 1000), Spacing1, hit, normals, CubeCol, CubeCol2);
                 if (colTemp.w < 0.9)
                 {
-                    col = colTemp * VectorAngle(rayDir, float3(0, 1, 0));
+                    //col = colTemp * VectorAngle(rayDir, float3(0, 1, 0));
+                    col.xyz = colTemp.xyz * float3(lightAngle, lightAngle, lightAngle);
                 }
 
                 //*
@@ -234,14 +236,16 @@ Shader "ArtEye/RaySkybox"
                 colTemp = CubePatternPlane(rayDir, CubeWallPos.xyz, CubeWallDir.xyz, CubeWallScale.xyz, Spacing2.xyz, hit, normals, CubeCol3, CubeCol4);
                 if (colTemp.w < 0.9)
                 {
-                    col = colTemp * VectorAngle(rayDir, float3(0, 1, 0));
+                    //col = colTemp * VectorAngle(rayDir, float3(0, 1, 0));
+                    col.xyz = colTemp.xyz * float3(lightAngle, lightAngle, lightAngle);
                 }
 
                 //partial Cube roof 
                 colTemp = CubePatternPlane(rayDir, CubeRoofPos.xyz, CubeRoofDir.xyz, CubeRoofScale.xyz, Spacing3.xyz, hit, normals, CubeCol5, CubeCol6);
                 if (colTemp.w < 0.9)
                 {
-                    col = colTemp * VectorAngle(rayDir, float3(0, 1, 0));
+                    //col = colTemp * VectorAngle(rayDir, float3(0, 1, 0));
+                    col.xyz = colTemp.xyz * float3(lightAngle, lightAngle, lightAngle);
                 }
 
                 return col;
